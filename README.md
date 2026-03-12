@@ -1,4 +1,4 @@
-# 🏛️ YouTube Autonomous Agent v2.0
+# 🏛️ YouTube Autonomous Agent
 
 > Automatically creates and publishes Stoicism videos + Shorts to YouTube using AI.
 
