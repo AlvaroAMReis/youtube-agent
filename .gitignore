@@ -1,0 +1,10 @@
+.env
+token.json
+client_secrets.json
+venv/
+temp/
+__pycache__/
+temp_shorts/
+logs/
+*.log
+*.json.bak

@@ -1,0 +1,23 @@
+# YouTube Autonomous Agent v2.0 - Dependências
+# Instala com: pip install -r requirements.txt
+
+# IA & APIs
+openai>=1.30.0
+elevenlabs>=1.0.0
+
+# HTTP & Downloads
+requests>=2.31.0
+httpx>=0.25.0
+
+# Edição de Vídeo (requer FFmpeg instalado no sistema)
+moviepy>=1.0.3
+Pillow>=10.0.0
+numpy>=1.24.0
+
+# YouTube / Google
+google-api-python-client>=2.100.0
+google-auth-httplib2>=0.1.1
+google-auth-oauthlib>=1.1.0
+
+# Configuração
+python-dotenv>=1.0.0
