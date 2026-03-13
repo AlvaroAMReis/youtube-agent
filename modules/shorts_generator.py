@@ -79,8 +79,10 @@ Cria um YouTube Short viral baseado na cena mais impactante. O Short deve:
 - Estar SEMPRE em inglês (título, gancho, narração e CTA)
 - Ter entre 30 e 40 segundos de narração
 - Começar com um gancho FORTE nos primeiros 3 segundos que crie curiosidade ou choque
+- O gancho deve começar com uma pergunta ou afirmação controversa (ex: "You've been lied to about...")
 - Usar frases curtas e impactantes — máximo 10 palavras por frase
 - Ter um ritmo rápido — cada ideia em 1-2 frases
+- A narração deve ter pausas dramáticas indicadas por "..." para a voz soar mais impactante
 - Incluir uma reviravolta ou facto surpreendente a meio do vídeo
 - Referenciar filósofos Estoicos pelo nome (Marcus Aurelius, Epictetus, Seneca)
 - Conectar a sabedoria antiga com problemas modernos (stress, ansiedade, trabalho, relações)
@@ -95,10 +97,10 @@ Devolve EXCLUSIVAMENTE este JSON:
   "cena_escolhida": <número da cena>,
   "titulo_short": "Título do Short com #Shorts no final (máximo 60 chars)",
   "texto_gancho": "Frase de gancho brutal dos primeiros 3 segundos (máximo 12 palavras)",
-  "texto_narrado": "Texto completo do Short para narrar (45-55 segundos ≈ 120-150 palavras)",
+  "texto_narrado": "Texto completo do Short para narrar (30-40 segundos ≈ 80-100 palavras)",
   "palavra_chave_visual": "keyword em inglês para vídeo de fundo vertical no Pexels",
   "hashtags": ["#Shorts", "#tag2", "#tag3", "#tag4", "#tag5"],
-  "legenda_cta": "Texto curto para mostrar no final do vídeo (ex: 'Segue para mais 🔥')"
+  "legenda_cta": "Texto curto para mostrar no final do vídeo (ex: 'Follow for more 🔥')"
 }}"""
 
     try:
@@ -237,15 +239,15 @@ def download_vertical_video(keyword: str, output_dir: str) -> str:
                     w = vf.get("width", 0)
                     h = vf.get("height", 0)
 
-                    # Preferir vídeos já verticais
-                    if orientation == "portrait" and h > w:
+                    # Preferir vídeos já verticais com resolução mínima
+                    if orientation == "portrait" and h > w and h >= 1920 and w >= 1080:
                         url = vf.get("link")
                         if url and _download_video_file(url, output_path):
                             logger.info(f"  ✓ Vídeo vertical descarregado ({w}x{h})")
                             return str(output_path)
 
                     # Fallback: landscape para converter
-                    if orientation == "landscape" and w >= 1280:
+                    if orientation == "landscape" and w >= 1920:
                         url = vf.get("link")
                         if url and _download_video_file(url, output_path):
                             logger.info(f"  ✓ Vídeo landscape descarregado (será convertido para 9:16)")
@@ -265,9 +267,11 @@ def download_vertical_video(keyword: str, output_dir: str) -> str:
         r.raise_for_status()
         videos = r.json().get("videos", [])
         if videos:
-            vf = sorted(videos[0].get("video_files", []), key=lambda x: x.get("width", 0), reverse=True)
-            if vf and _download_video_file(vf[0]["link"], output_path):
-                return str(output_path)
+            vf_list = sorted(videos[0].get("video_files", []), key=lambda x: x.get("width", 0), reverse=True)
+            for vf in vf_list:
+                if vf.get("width", 0) >= 1920:
+                    if _download_video_file(vf["link"], output_path):
+                        return str(output_path)
     except Exception as e:
         logger.error(f"  Erro no fallback: {e}")
 
@@ -380,6 +384,26 @@ def edit_short_video(
     duration = min(audio.duration, SHORT_MAX_DURATION)
     logger.info(f"  Duração do Short: {duration:.1f}s")
 
+    # Música de fundo
+    import random
+    from moviepy.audio.fx.all import audio_loop, volumex
+    from moviepy.editor import CompositeAudioClip
+
+    music_dir = Path(__file__).parent.parent / "assets" / "music"
+    music_files = list(music_dir.glob("*.mp3"))
+
+    if music_files:
+        music_path = random.choice(music_files)
+        logger.info(f"  🎵 Música: {music_path.name}")
+        music = AudioFileClip(str(music_path))
+        music = audio_loop(music, duration=duration)
+        music = volumex(music, 0.06)
+        music = music.audio_fadein(1.5).audio_fadeout(2.0)
+        final_audio = CompositeAudioClip([audio, music])
+    else:
+        logger.warning("  ⚠ Nenhuma música encontrada em assets/music/")
+        final_audio = audio
+
     layers = []
 
     # 1. Vídeo de fundo vertical
@@ -405,7 +429,7 @@ def edit_short_video(
         layers.append(gancho_clip)
 
     # 4. Legenda CTA (últimos 4 segundos, em baixo)
-    cta_text = short_data.get("legenda_cta", "Segue para mais 🔥")
+    cta_text = short_data.get("legenda_cta", "Follow for more 🔥")
     if duration > 6:
         cta_start = duration - 4
         cta_clip = _create_text_overlay(cta_text, 4.0, position="bottom")
@@ -414,8 +438,9 @@ def edit_short_video(
 
     # Compor todos os layers
     final = CompositeVideoClip(layers, size=(SHORT_WIDTH, SHORT_HEIGHT))
-    final = final.set_audio(audio.subclip(0, duration))
+    final = final.set_audio(final_audio.subclip(0, duration))
     final = final.set_duration(duration)
+    final = final.fadein(0.5).fadeout(0.5)
 
     logger.info(f"  A renderizar Short → {output_path}")
     logger.info("  (Short rendering em curso...)")
@@ -427,7 +452,7 @@ def edit_short_video(
             fps=SHORT_FPS,
             codec="libx264",
             audio_codec="aac",
-            bitrate="2000k",
+            bitrate="4000k",
             audio_bitrate="192k",
             threads=4,
             preset="medium",
@@ -471,8 +496,9 @@ def upload_short(youtube, short_data: dict, video_path: str, thumbnail_path: str
     descricao = (
         f"{short_data.get('texto_gancho', '')}\n\n"
         f"{'  '.join(tags)}\n\n"
-        "👆 Vê o vídeo completo no canal!\n"
-        "🔔 Subscreve para mais conteúdo diário"
+        "👆 Watch the full video on the channel!\n"
+        "🔔 Subscribe for more Stoic wisdom\n\n"
+        "💬 What Stoic lesson changed your life?"
     )
 
     request_body = {
@@ -481,7 +507,7 @@ def upload_short(youtube, short_data: dict, video_path: str, thumbnail_path: str
             "description": descricao[:5000],
             "tags": [t.replace("#", "") for t in tags[:10]],
             "categoryId": "27",
-            "defaultLanguage": "pt"
+            "defaultLanguage": "en"
         },
         "status": {
             "privacyStatus": "public",
