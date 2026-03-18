@@ -1,0 +1,242 @@
+[
+  {
+    "id": 1,
+    "tema": "A Perna Partida",
+    "filosofo": "Epictetus",
+    "momento_historico": "O seu mestre Epaphroditus partiu-lhe a perna deliberadamente. Epictetus sorriu e disse: 'Eu disse-te que ia partir.' Quando a perna estava completamente quebrada, disse: 'Não te disse que ia partir?'",
+    "problema_moderno": "Sentir-se preso numa situação que não controla — emprego, relação, família.",
+    "emocao": "impotência"
+  },
+  {
+    "id": 2,
+    "tema": "O Exílio na Córsega",
+    "filosofo": "Seneca",
+    "momento_historico": "Banido pelo Imperador Cláudio para a Córsega durante 8 anos, longe do poder, da família e de Roma. Em vez de desesperar, escreveu as suas obras mais profundas.",
+    "problema_moderno": "Solidão, isolamento social, sentir que o mundo te esqueceu.",
+    "emocao": "solidão"
+  },
+  {
+    "id": 3,
+    "tema": "A Peste Antonina",
+    "filosofo": "Marcus Aurelius",
+    "momento_historico": "A Peste Antonina matou 5 milhões de pessoas no Império Romano. Marcus Aurelius governou durante 15 anos de epidemia, enterrou soldados e cidadãos, e continuou a escrever nas Meditações sobre aceitação e dever.",
+    "problema_moderno": "Medo de doenças, incerteza global, ansiedade sobre o futuro.",
+    "emocao": "medo"
+  },
+  {
+    "id": 4,
+    "tema": "A Traição de Cassius",
+    "filosofo": "Marcus Aurelius",
+    "momento_historico": "Avidius Cassius, o seu general de confiança, rebelou-se e proclamou-se Imperador enquanto Marcus estava doente. Quando Cassius foi assassinado pelos seus próprios soldados, Marcus lamentou não ter podido perdoá-lo pessoalmente.",
+    "problema_moderno": "Traição de pessoas de confiança — amigos, colegas, parceiros.",
+    "emocao": "raiva e traição"
+  },
+  {
+    "id": 5,
+    "tema": "A Pobreza Voluntária",
+    "filosofo": "Seneca",
+    "momento_historico": "Seneca, um dos homens mais ricos de Roma, praticava periodicamente 'pobreza voluntária' — dormia no chão, comia pão seco, usava roupas simples — para provar a si mesmo que não tinha medo de perder tudo.",
+    "problema_moderno": "Materialismo, medo de perder status, dependência de confortos.",
+    "emocao": "ansiedade material"
+  },
+  {
+    "id": 6,
+    "tema": "A Morte dos Filhos",
+    "filosofo": "Marcus Aurelius",
+    "momento_historico": "Marcus Aurelius perdeu 5 dos seus filhos ainda crianças. Nas Meditações escreveu sobre como a perda é natural e que o amor não deve tornar-se correntes.",
+    "problema_moderno": "Luto, perda, incapacidade de aceitar o que não podemos controlar.",
+    "emocao": "luto"
+  },
+  {
+    "id": 7,
+    "tema": "O Escravo que Ensinou Imperadores",
+    "filosofo": "Epictetus",
+    "momento_historico": "Epictetus nasceu escravo, sem direitos, sem liberdade física. Tornou-se o filósofo mais influente da Roma Imperial — imperadores e senadores atravessavam o Mediterrâneo para o ouvir.",
+    "problema_moderno": "Sentir que as circunstâncias de nascimento ou situação actual determinam o futuro.",
+    "emocao": "vitimização"
+  },
+  {
+    "id": 8,
+    "tema": "A Última Noite de Seneca",
+    "filosofo": "Seneca",
+    "momento_historico": "Nero ordenou a morte de Seneca, seu antigo tutor. Seneca cortou os pulsos rodeado de amigos, ditou as suas últimas palavras e morreu sem medo — exactamente como tinha vivido e escrito durante décadas.",
+    "problema_moderno": "Medo da morte, medo de envelhecer, ansiedade existencial.",
+    "emocao": "medo da morte"
+  },
+  {
+    "id": 9,
+    "tema": "O Diário Privado",
+    "filosofo": "Marcus Aurelius",
+    "momento_historico": "As Meditações nunca foram escritas para ser publicadas. Marcus Aurelius escrevia para si mesmo — uma série de cartas e reprimendas pessoais. 'Para de discutir o que é um homem bom. Sê um.'",
+    "problema_moderno": "Hipocrisia, falar sem agir, identidade performativa nas redes sociais.",
+    "emocao": "hipocrisia"
+  },
+  {
+    "id": 10,
+    "tema": "O Banquete Simples",
+    "filosofo": "Musonius Rufus",
+    "momento_historico": "Musonius Rufus, chamado 'o Sócrates Romano', ensinava que comer de forma simples era um exercício filosófico. Recusava banquetes e comia legumes enquanto os outros festejavam com carne e vinho.",
+    "problema_moderno": "Consumismo, excessos, incapacidade de estar satisfeito com o suficiente.",
+    "emocao": "insatisfação"
+  },
+  {
+    "id": 11,
+    "tema": "A Carta ao Futuro",
+    "filosofo": "Seneca",
+    "momento_historico": "Seneca escreveu 124 cartas a Lucílio sabendo que ia morrer em breve. Cada carta era sobre como viver — não como sobreviver. 'Omnia aliena sunt, tempus tantum nostrum est.' — Tudo é alheio, só o tempo é nosso.",
+    "problema_moderno": "Desperdiçar tempo, procrastinação, viver para os outros.",
+    "emocao": "desperdício de tempo"
+  },
+  {
+    "id": 12,
+    "tema": "O Obstáculo é o Caminho",
+    "filosofo": "Marcus Aurelius",
+    "momento_historico": "Marcus Aurelius governou durante quase 20 anos de guerras contínuas nas fronteiras do Reno e Danúbio. Escreveu nas Meditações: 'O impedimento à acção avança a acção. O que está no caminho torna-se o caminho.'",
+    "problema_moderno": "Ver os obstáculos como sinais para desistir em vez de ferramentas para crescer.",
+    "emocao": "desistência"
+  },
+  {
+    "id": 13,
+    "tema": "A Liberdade Interior",
+    "filosofo": "Epictetus",
+    "momento_historico": "Mesmo como escravo, Epictetus ensinava que ninguém pode escravizar a mente. O corpo pode ser acorrentado — a vontade, nunca. 'Nunca digas que perdeste algo. Di que o devolveste.'",
+    "problema_moderno": "Sentir que não tens controlo sobre a tua vida, dependência de aprovação externa.",
+    "emocao": "falta de controlo"
+  },
+  {
+    "id": 14,
+    "tema": "O General que Chorou",
+    "filosofo": "Marcus Aurelius",
+    "momento_historico": "Quando o seu co-imperador e amigo Lucius Verus morreu de doença, Marcus Aurelius chorou publicamente — algo inédito para um Imperador Romano. Depois voltou para a guerra no dia seguinte.",
+    "problema_moderno": "A ideia de que homens fortes não sentem — e que sentir é fraqueza.",
+    "emocao": "repressão emocional"
+  },
+  {
+    "id": 15,
+    "tema": "O Exame Nocturno",
+    "filosofo": "Seneca",
+    "momento_historico": "Seneca descreveu a prática de Sextius: cada noite antes de dormir, examinar o dia inteiro em três perguntas — Que curei hoje? Que vício resisti? Em que melhorei? Praticou isto até à morte.",
+    "problema_moderno": "Ir para a cama sem reflectir, repetir os mesmos erros, falta de crescimento consciente.",
+    "emocao": "estagnação"
+  },
+  {
+    "id": 16,
+    "tema": "A Contemplação da Morte",
+    "filosofo": "Marcus Aurelius",
+    "momento_historico": "Marcus Aurelius praticava Memento Mori diariamente — lembrando-se que ia morrer. Escreveu: 'Pensa frequentemente na rapidez com que as coisas passam e desaparecem.' Usava isto para agir sem hesitação.",
+    "problema_moderno": "Adiar decisões importantes, viver como se tivesses tempo infinito.",
+    "emocao": "procrastinação existencial"
+  },
+  {
+    "id": 17,
+    "tema": "O Filósofo Banido",
+    "filosofo": "Epictetus",
+    "momento_historico": "O Imperador Domiciano baniu todos os filósofos de Roma. Epictetus foi para Nicópolis, uma cidade pequena no noroeste da Grécia, e continuou a ensinar. Os alunos viajavam semanas para o ouvir.",
+    "problema_moderno": "Deixar que circunstâncias externas destruam o propósito interior.",
+    "emocao": "perda de propósito"
+  },
+  {
+    "id": 18,
+    "tema": "A Riqueza de Seneca",
+    "filosofo": "Seneca",
+    "momento_historico": "Seneca era incrivelmente rico — mas escrevia que a riqueza era indifferent, nem boa nem má. Quando acusado de hipocrisia, respondeu: 'Estou a aprender o mesmo que te ensino — mas ainda não cheguei lá.'",
+    "problema_moderno": "Hipocrisia entre valores declarados e comportamento real.",
+    "emocao": "hipocrisia"
+  },
+  {
+    "id": 19,
+    "tema": "O Peso da Coroa",
+    "filosofo": "Marcus Aurelius",
+    "momento_historico": "Marcus Aurelius nunca quis ser Imperador. Foi escolhido pelo Imperador Antonino Pio aos 17 anos e esperou décadas antes de governar. Escreveu que o poder era uma carga, não uma recompensa.",
+    "problema_moderno": "Perseguir poder, status e reconhecimento como fins em si mesmos.",
+    "emocao": "ambição vazia"
+  },
+  {
+    "id": 20,
+    "tema": "A Dor como Professora",
+    "filosofo": "Epictetus",
+    "momento_historico": "Com a perna permanentemente danificada pelo seu mestre, Epictetus andou com dificuldade toda a vida. Ensinava que a dor física era apenas uma sensação — a interpretação que lhe damos é o que nos destrói ou liberta.",
+    "problema_moderno": "Sofrimento físico ou emocional que paralisa em vez de fortalecer.",
+    "emocao": "sofrimento"
+  },
+  {
+    "id": 21,
+    "tema": "O Rei da Indústria que Estudou Epictetus",
+    "filosofo": "Epictetus",
+    "momento_historico": "O almirante James Stockdale foi prisioneiro de guerra no Vietnam durante 7 anos. O único livro que tinha era Epictetus. Sobreviveu usando a distinção entre o que controlamos e o que não controlamos.",
+    "problema_moderno": "Colapso mental sob pressão extrema, perda de identidade em crise.",
+    "emocao": "colapso sob pressão"
+  },
+  {
+    "id": 22,
+    "tema": "A Vingança que Não Houve",
+    "filosofo": "Marcus Aurelius",
+    "momento_historico": "Quando Cassius foi assassinado pelos seus próprios soldados, Marcus Aurelius ordenou que os conspiradores não fossem punidos. 'A vingança é uma confissão de que foste ferido.'",
+    "problema_moderno": "Guardar rancor, querer que os outros sofram pelo que te fizeram.",
+    "emocao": "rancor"
+  },
+  {
+    "id": 23,
+    "tema": "O Tempo Roubado",
+    "filosofo": "Seneca",
+    "momento_historico": "Seneca abriu a sua obra 'De Brevitate Vitae' com: 'A vida não é curta — nós tornamo-la curta.' Escreveu isto aos 60 anos, sabendo que Nero o mataria em breve.",
+    "problema_moderno": "Reclamar que não há tempo suficiente enquanto se desperdiça o que existe.",
+    "emocao": "desperdício"
+  },
+  {
+    "id": 24,
+    "tema": "O Discípulo que Duvidou",
+    "filosofo": "Epictetus",
+    "momento_historico": "Um aluno de Epictetus disse: 'Mas e se perder tudo?' Epictetus respondeu: 'Então terás perdido coisas que nunca foram tuas. Começa por perceber o que é teu.'",
+    "problema_moderno": "Medo de perder posses, status, relacionamentos.",
+    "emocao": "medo da perda"
+  },
+  {
+    "id": 25,
+    "tema": "A Filosofia no Campo de Batalha",
+    "filosofo": "Marcus Aurelius",
+    "momento_historico": "Marcus Aurelius escreveu partes das Meditações nas tendas de campanha durante as Guerras Marcomanas. Entre batalhas, escrevia sobre paciência, humildade e como ser um homem melhor.",
+    "problema_moderno": "Usar a falta de tempo e condições como desculpa para não crescer.",
+    "emocao": "desculpas"
+  },
+  {
+    "id": 26,
+    "tema": "O Insulto que Passa",
+    "filosofo": "Epictetus",
+    "momento_historico": "Epictetus ensinava: 'Se alguém te insultar, é a opinião dele sobre ti, não a tua realidade. Podes receber o insulto como um presente — e devolvê-lo.'",
+    "problema_moderno": "Reagir a críticas, comentários negativos, julgamentos de estranhos.",
+    "emocao": "ego ferido"
+  },
+  {
+    "id": 27,
+    "tema": "A Amizade Real",
+    "filosofo": "Seneca",
+    "momento_historico": "Seneca escreveu a Lucílio: 'Antes de tudo — decide o tipo de vida que queres viver. Depois encontra amigos que tornem isso possível.' Passou os últimos anos da vida a cortar ligações com a corte de Nero.",
+    "problema_moderno": "Rodear-se de pessoas que te afastam dos teus valores.",
+    "emocao": "influências tóxicas"
+  },
+  {
+    "id": 28,
+    "tema": "O Espelho da Multidão",
+    "filosofo": "Seneca",
+    "momento_historico": "Seneca evitava multidões deliberadamente. Escreveu: 'Regressa a ti mesmo tanto quanto puderes. Passa tempo com aqueles que te vão tornar melhor.' Após visitar o anfiteatro, sentia-se moralmente pior.",
+    "problema_moderno": "Absorver os valores e comportamentos da maioria sem questionar.",
+    "emocao": "conformismo"
+  },
+  {
+    "id": 29,
+    "tema": "A Gratidão pelo Suficiente",
+    "filosofo": "Marcus Aurelius",
+    "momento_historico": "No início das Meditações, Marcus Aurelius passou páginas a agradecer — aos seus professores, à sua mãe, ao seu avô. Um Imperador a agradecer por lições de humildade e simplicidade.",
+    "problema_moderno": "Focar no que falta em vez do que existe, comparação constante com outros.",
+    "emocao": "insatisfação crónica"
+  },
+  {
+    "id": 30,
+    "tema": "O Último Ensinamento",
+    "filosofo": "Marcus Aurelius",
+    "momento_historico": "Marcus Aurelius morreu em 180 d.C. durante uma campanha militar no Danúbio. As suas últimas palavras registadas aos guardas foram: 'Ide ter com o sol nascente — eu já me ponho.'",
+    "problema_moderno": "Medo de deixar um legado insignificante, ansiedade sobre o impacto da própria vida.",
+    "emocao": "insignificância"
+  }
+]

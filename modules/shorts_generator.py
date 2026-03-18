@@ -4,9 +4,9 @@ Cria automaticamente um YouTube Short a partir do guião do vídeo longo.
 
 Fluxo:
   6a. Seleciona a cena mais impactante via GPT-4o
-  6b. Gera narração curta (45-55s) via ElevenLabs
+  6b. Gera narração curta (30-40s) via ElevenLabs
   6c. Descarrega vídeo vertical do Pexels (ou reformata existente)
-  6d. Edita em formato 9:16 com texto de legenda animado
+  6d. Edita em formato 9:16 com legendas Whisper sincronizadas
   6e. Faz upload como YouTube Short
 """
 
@@ -46,7 +46,7 @@ SHORT_FPS = 30
 def select_best_scene(script_data: dict) -> dict:
     """
     Usa GPT-4o para selecionar a cena mais impactante do guião
-    e reescrever o texto para formato Short (45-55 segundos).
+    e reescrever o texto para formato Short (30-40 segundos).
 
     Returns:
         dict com: texto_narrado, palavra_chave_visual, titulo_short,
@@ -64,43 +64,114 @@ def select_best_scene(script_data: dict) -> dict:
             "palavra_chave_visual": cena["palavra_chave_visual"]
         })
 
-    system_prompt = """És um especialista em YouTube Shorts virais.
-Analisas guiões e identificas o momento mais impactante para criar um Short.
-Respondes SEMPRE e APENAS em formato JSON válido, sem texto extra nem markdown."""
+    system_prompt = """You are the lead scriptwriter for "@TheSilentSage" — a Dark Stoicism YouTube channel.
 
-    user_prompt = f"""Analisa este guião do canal sobre '{script_data.get("nicho", "filosofia")}':
+PERSONA:
+Your voice is solemn, cinematic, and authoritative. You write for an audience seeking resilience and self-control.
+You use a "Dark Philosophy" aesthetic: brutal truths, focus on mortality, and the power of the internal mind.
+You write for a deep AI voice (ElevenLabs) — slow, pauseful, heavy.
+You NEVER use coach-speak or generic motivation.
 
-Título do vídeo longo: {script_data['titulo']}
+VOCABULARY — use these words:
+Unshakable, Internal Citadel, Ephemeral, Discipline, Chaos, Fate, Virtue, Mortality, Dust, Slave, Sovereign, Retreat, Stone, Silence
 
-Cenas disponíveis:
+BANNED — never use:
+wisdom, embrace, journey, life lessons, in today's world, fast-paced, welcome back, ancient wisdom,
+motivational, positive, say out loud, write it down, repeat after me, coach, mindset hack, thanks for watching
+
+SCRIPT RULES:
+1. HOOK (0-5s): Shocking direct statement. NEVER a question. Use "You" to confront the viewer immediately.
+2. RHYTHM: Alternate short punchy sentences (impact) with longer rhythmic ones (reflection).
+3. LOOP: The final sentence must lead back to the hook seamlessly. No black screens. No "thanks for watching".
+4. CTA: Always end with exactly — "Follow for more Stoic wisdom." No emojis. No variations.
+
+VISUAL CATEGORIES (Stoic/Greco-Roman only — NEVER Zen or Asian):
+- Chaos/Subjection:   storm clouds, crashing ocean waves, blurred city crowd, dark forest
+- Authority/History:  marble statues, ancient Roman ruins, Greek temple, weathered stone
+- Inner Strength:     high mountain peaks, misty mountains, lone rock in storm, stone cliffs
+- Ephemerality/Silence: candle flame in dark, match smoke, fire flames, starry night sky
+
+You respond ONLY in valid JSON format. No extra text. No markdown."""
+
+    user_prompt = f"""Channel: "@TheSilentSage" — Dark Stoicism. Stone. Fire. Silence.
+Audience: 18-35, overwhelmed, anxious, lost. They want brutal truth, not comfort.
+
+Long video title: {script_data['titulo']}
+
+Available scenes:
 {json.dumps(cenas_resumidas, ensure_ascii=False, indent=2)}
 
-Cria um YouTube Short viral baseado na cena mais impactante. O Short deve:
-- Estar SEMPRE em inglês (título, gancho, narração e CTA)
-- Ter entre 30 e 40 segundos de narração
-- Começar com um gancho FORTE nos primeiros 3 segundos que crie curiosidade ou choque
-- O gancho deve começar com uma pergunta ou afirmação controversa (ex: "You've been lied to about...")
-- Usar frases curtas e impactantes — máximo 10 palavras por frase
-- Ter um ritmo rápido — cada ideia em 1-2 frases
-- A narração deve ter pausas dramáticas indicadas por "..." para a voz soar mais impactante
-- Incluir uma reviravolta ou facto surpreendente a meio do vídeo
-- Referenciar filósofos Estoicos pelo nome (Marcus Aurelius, Epictetus, Seneca)
-- Conectar a sabedoria antiga com problemas modernos (stress, ansiedade, trabalho, relações)
-- Ser independente (funcionar sem ver o vídeo longo)
-- Terminar com uma pergunta retórica poderosa antes do CTA
-- Ter uma chamada à ação no final ("Follow for more" ou similar)
-- O título deve ter números ou palavras de impacto como "NEVER", "ALWAYS", "SECRET", "TRUTH"
-- As hashtags devem incluir #Stoicism #MarcusAurelius #Philosophy #Mindset #SelfImprovement
+Write a 30-second Short script. Make the viewer think: "I have never heard it like this."
+Then make them follow — not because you asked, but because they must.
 
-Devolve EXCLUSIVAMENTE este JSON:
+STRUCTURE:
+
+HOOK (0-5s)
+- Brutal statement of truth. Never a question.
+- Strong: "You are not free. You are a slave to every insult, every fleeting emotion."
+- Strong: "You are not stressed. You are addicted to chaos."
+- Weak (never): "Are you stressed?" / "Have you ever wondered..."
+
+TEACHING (5-20s)
+- One specific real moment from Marcus Aurelius, Seneca, or Epictetus — not a generic quote.
+- Show the philosopher as a flawed human who still chose discipline.
+- Betrayal, loss, rage, humiliation — things the viewer recognises.
+- NEVER invent mysteries. The Meditations exist. The Letters exist. Respect the audience.
+
+PRACTICE (20-28s)
+- One internal shift. Not a coaching trick. Not verbal performance.
+- Strong: "Retreat inward. Your virtue is the only thing they cannot take. Everything else... is just dust."
+- Weak: "Say out loud: this is not mine to carry."
+
+OUTRO (28-30s)
+- End in silence and identity. Connect to the channel name: The Silent Sage.
+- Strong: "The truth is found in silence, not in the crowd. Follow for more Stoic wisdom."
+- Strong: "The path is narrow. Most will stay in the noise. Follow to join the silent."
+- The last sentence must loop back to the hook naturally — no black screen, no ending.
+
+WRITING RULES:
+- Every sentence under 10 words
+- Use "..." for dramatic pauses
+- Total: 80-100 words (30s at slow AI voice pace)
+- Hook line = base of titulo_short
+- End always with exactly: "Follow for more Stoic wisdom."
+
+VISUAL ARC — emotional progression, Greco-Roman only:
+  Hook     → Chaos/Subjection   → 'dramatic storm clouds' OR 'ocean waves calm' OR 'dark forest mystical'
+  Teaching → Authority/History  → 'ancient rome ruins' OR 'greek temple' OR 'ancient library'
+  Practice → Inner Strength     → 'misty mountains' OR 'mountain fog cinematic' OR 'waterfall nature'
+  Outro    → Ephemerality/Silence → 'candle flame dark' OR 'fire flames dark' OR 'starry night sky'
+
+Return EXCLUSIVELY this JSON:
 {{
-  "cena_escolhida": <número da cena>,
-  "titulo_short": "Título do Short com #Shorts no final (máximo 60 chars)",
-  "texto_gancho": "Frase de gancho brutal dos primeiros 3 segundos (máximo 12 palavras)",
-  "texto_narrado": "Texto completo do Short para narrar (30-40 segundos ≈ 80-100 palavras)",
-  "palavra_chave_visual": "keyword em inglês para vídeo de fundo vertical no Pexels",
-  "hashtags": ["#Shorts", "#tag2", "#tag3", "#tag4", "#tag5"],
-  "legenda_cta": "Texto curto para mostrar no final do vídeo (ex: 'Follow for more 🔥')"
+  "cena_escolhida": <scene number>,
+  "titulo_short": "Hook-based title, punchy, under 55 chars, ends with #Shorts",
+  "texto_gancho": "Exact first sentence (max 12 words, brutal statement, never a question)",
+  "texto_narrado": "Full narration — 4-part structure, 80-100 words, use ... for pauses",
+  "cenas_visuais": [
+    {{
+      "parte": "hook",
+      "texto": "exact sentence(s) from narration for this part",
+      "visual": "Choose ONE from: 'dramatic storm clouds', 'ocean waves calm', 'dark forest mystical'"
+    }},
+    {{
+      "parte": "teaching",
+      "texto": "exact sentence(s) from narration for this part",
+      "visual": "Choose ONE from: 'ancient rome ruins', 'greek temple', 'ancient library'"
+    }},
+    {{
+      "parte": "practice",
+      "texto": "exact sentence(s) from narration for this part",
+      "visual": "Choose ONE from: 'misty mountains', 'mountain fog cinematic', 'waterfall nature'"
+    }},
+    {{
+      "parte": "outro",
+      "texto": "exact sentence(s) from narration for this part",
+      "visual": "Choose ONE from: 'candle flame dark', 'fire flames dark', 'starry night sky'"
+    }}
+  ],
+  "palavra_chave_visual": "Choose ONE from: 'ancient rome ruins', 'misty mountains', 'candle flame dark'",
+  "hashtags": ["#Shorts", "#Stoicism", "#MarcusAurelius", "#Mindset", "#SelfImprovement"]
 }}"""
 
     try:
@@ -111,7 +182,7 @@ Devolve EXCLUSIVAMENTE este JSON:
                 {"role": "user", "content": user_prompt}
             ],
             temperature=0.7,
-            max_tokens=1000,
+            max_tokens=1500,
             response_format={"type": "json_object"}
         )
 
@@ -158,7 +229,7 @@ def generate_short_narration(texto: str, output_dir: str, voice_id: str) -> str:
             voice_settings=VoiceSettings(
                 stability=0.5,
                 similarity_boost=0.90,
-                style=0.45,          # Mais expressivo para Shorts
+                style=0.45,
                 use_speaker_boost=True
             )
         )
@@ -168,7 +239,6 @@ def generate_short_narration(texto: str, output_dir: str, voice_id: str) -> str:
                 if chunk:
                     f.write(chunk)
 
-        # Validar duração
         audio_clip = AudioFileClip(str(output_path))
         duration = audio_clip.duration
         audio_clip.close()
@@ -205,7 +275,6 @@ def download_vertical_video(keyword: str, output_dir: str) -> str:
     headers = {"Authorization": api_key}
     output_path = Path(output_dir) / "video_short_bg.mp4"
 
-    # Tentar primeiro vídeo portrait/vertical
     for orientation in ["portrait", "landscape"]:
         params = {
             "query": keyword,
@@ -239,14 +308,12 @@ def download_vertical_video(keyword: str, output_dir: str) -> str:
                     w = vf.get("width", 0)
                     h = vf.get("height", 0)
 
-                    # Preferir vídeos já verticais com resolução mínima
                     if orientation == "portrait" and h > w and h >= 1920 and w >= 1080:
                         url = vf.get("link")
                         if url and _download_video_file(url, output_path):
                             logger.info(f"  ✓ Vídeo vertical descarregado ({w}x{h})")
                             return str(output_path)
 
-                    # Fallback: landscape para converter
                     if orientation == "landscape" and w >= 1920:
                         url = vf.get("link")
                         if url and _download_video_file(url, output_path):
@@ -259,7 +326,7 @@ def download_vertical_video(keyword: str, output_dir: str) -> str:
 
         time.sleep(0.3)
 
-    # Último fallback genérico
+    # Fallback genérico
     logger.warning("  ⚠ Usando fallback genérico 'dark atmosphere'")
     fallback_params = {"query": "dark atmosphere cinematic", "per_page": 3, "orientation": "landscape"}
     try:
@@ -292,6 +359,36 @@ def _download_video_file(url: str, output_path: Path) -> bool:
         return False
 
 
+def download_multi_scene_videos(cenas_visuais: list, fallback_keyword: str, output_dir: str) -> list:
+    """
+    Descarrega um vídeo de fundo diferente para cada parte do Short.
+    Retorna lista de paths na ordem: [hook, teaching, practice, outro]
+    Se falhar alguma parte, usa o fallback global.
+    """
+    logger.info("  🎬 A descarregar vídeos por cena...")
+    paths = []
+    for i, cena in enumerate(cenas_visuais):
+        keyword = cena.get("visual", fallback_keyword)
+        output_path = Path(output_dir) / f"video_scene_{i}_{cena.get('parte','part')}.mp4"
+        try:
+            path = download_vertical_video(keyword, output_dir)
+            # renomear para não sobrescrever entre cenas
+            import shutil
+            shutil.move(path, str(output_path))
+            paths.append(str(output_path))
+            logger.info(f"  ✓ Cena '{cena.get('parte')}' → {keyword}")
+        except Exception as e:
+            logger.warning(f"  ⚠ Falhou cena '{cena.get('parte')}': {e} — usando fallback")
+            try:
+                path = download_vertical_video(fallback_keyword, output_dir)
+                import shutil
+                shutil.move(path, str(output_path))
+                paths.append(str(output_path))
+            except Exception:
+                paths.append(None)
+    return paths
+
+
 # ─────────────────────────────────────────────
 # 6d. EDITAR VÍDEO SHORT (9:16)
 # ─────────────────────────────────────────────
@@ -299,7 +396,6 @@ def _download_video_file(url: str, output_path: Path) -> bool:
 def _make_vertical_clip(video_path: str, duration: float) -> VideoFileClip:
     clip = VideoFileClip(video_path, audio=False)
 
-    # Escalar para preencher completamente o ecrã (sem barras pretas)
     scale_w = SHORT_WIDTH / clip.w
     scale_h = SHORT_HEIGHT / clip.h
     scale = max(scale_w, scale_h)
@@ -308,7 +404,6 @@ def _make_vertical_clip(video_path: str, duration: float) -> VideoFileClip:
     new_h = int(clip.h * scale)
     scaled = clip.resize((new_w, new_h))
 
-    # Crop ao centro
     cropped = crop(
         scaled,
         x_center=scaled.w / 2,
@@ -317,7 +412,6 @@ def _make_vertical_clip(video_path: str, duration: float) -> VideoFileClip:
         height=SHORT_HEIGHT
     )
 
-    # Loop ou cortar para duração exata
     if cropped.duration < duration:
         loops = int(duration / cropped.duration) + 1
         cropped = concatenate_videoclips([cropped] * loops)
@@ -325,19 +419,66 @@ def _make_vertical_clip(video_path: str, duration: float) -> VideoFileClip:
     return cropped.subclip(0, min(duration, SHORT_MAX_DURATION)).set_fps(SHORT_FPS)
 
 
+def _apply_ken_burns(clip: VideoFileClip, zoom_factor: float = 1.04) -> VideoFileClip:
+    """
+    Aplica Ken Burns effect — slow zoom sintético para evitar clips estáticos.
+    Aumenta zoom de 1.0x para zoom_factor ao longo da duração do clip.
+    """
+    def zoom_frame(get_frame, t):
+        frame = get_frame(t)
+        progress = t / clip.duration if clip.duration > 0 else 0
+        current_zoom = 1.0 + (zoom_factor - 1.0) * progress
+        h, w = frame.shape[:2]
+        new_w = int(w / current_zoom)
+        new_h = int(h / current_zoom)
+        x1 = (w - new_w) // 2
+        y1 = (h - new_h) // 2
+        cropped_frame = frame[y1:y1+new_h, x1:x1+new_w]
+        import cv2
+        return cv2.resize(cropped_frame, (w, h), interpolation=cv2.INTER_LINEAR)
+
+    try:
+        import cv2
+        return clip.fl(zoom_frame, apply_to="mask" if clip.mask else [])
+    except Exception:
+        return clip  # fallback sem Ken Burns se cv2 não disponível
+
+
+def _get_cta_text(duration: float) -> str:
+    """
+    Retorna CTA rotativo entre 3 opções para variar engajamento.
+    Alterna baseado no segundo actual para ser determinístico por run.
+    """
+    import time
+    ctas = [
+        "Follow for more Stoic wisdom",
+        "Which emotion is your master?",
+        "Are you building your citadel?",
+    ]
+    index = int(time.time()) % len(ctas)
+    return ctas[index]
+
+
 def _create_text_overlay(text: str, duration: float, position: str = "bottom") -> TextClip:
     """
-    Cria uma legenda/texto animado para sobrepor no vídeo.
+    Cria texto animado para sobrepor no vídeo.
+
+    Safe zones YouTube Shorts:
+      'top'    → 0.12 (abaixo da barra de pesquisa — safe zone)
+      'bottom' → 0.84 (acima dos botões de like/comentário — safe zone)
+      Legendas → 0.68 (zona central-baixo — sempre segura)
     """
-    # Quebrar texto em linhas curtas (max 25 chars por linha)
     wrapped = textwrap.fill(text, width=22)
 
-    y_pos = 0.75 if position == "bottom" else 0.10
+    if position == "top":
+        y_pos = 0.12   # era 0.08 — movido para baixo da barra de pesquisa
+    else:
+        y_pos = 0.84   # era 0.88 — movido para cima dos botões de like
 
     try:
         txt = TextClip(
             wrapped,
-            fontsize=72,
+            fontsize=65,
             font="Arial-Bold",
             color="white",
             stroke_color="black",
@@ -346,13 +487,11 @@ def _create_text_overlay(text: str, duration: float, position: str = "bottom") -
             size=(SHORT_WIDTH - 80, None),
             align="center"
         ).set_duration(duration).set_position(("center", y_pos), relative=True)
-
         return txt
     except Exception:
-        # Fallback se Arial-Bold não disponível
         txt = TextClip(
             wrapped,
-            fontsize=65,
+            fontsize=58,
             color="white",
             stroke_color="black",
             stroke_width=2,
@@ -363,14 +502,50 @@ def _create_text_overlay(text: str, duration: float, position: str = "bottom") -
         return txt
 
 
+# ─────────────────────────────────────────────
+# WHISPER — LEGENDAS SINCRONIZADAS
+# ─────────────────────────────────────────────
+
+def _generate_subtitles(audio_path: str) -> list:
+    """Gera legendas sincronizadas via Whisper API."""
+    logger.info("  🎤 A gerar legendas via Whisper...")
+    try:
+        client = OpenAI()
+        with open(audio_path, "rb") as f:
+            transcript = client.audio.transcriptions.create(
+                model="whisper-1",
+                file=f,
+                response_format="verbose_json",
+                timestamp_granularities=["word"]
+            )
+        words = transcript.words
+        logger.info(f"  ✓ {len(words)} palavras transcritas")
+        return words
+    except Exception as e:
+        logger.warning(f"  ⚠ Whisper falhou: {e}")
+        return []
+
+
 def edit_short_video(
     audio_path: str,
     video_bg_path: str,
     short_data: dict,
-    output_dir: str
+    output_dir: str,
+    scene_video_paths: list = None
 ) -> str:
     """
-    Monta o Short final: vídeo 9:16 + áudio + legendas + CTA.
+    Monta o Short final: vídeo 9:16 + áudio + legendas Whisper + gancho + CTA fixo.
+
+    SOUND DESIGN:
+      0-5s    → heavy_wind.wav (hook atmosphere) + música ambiente a 6%
+      ~15s    → stoic_bell.wav quando filósofo é mencionado + ducking da música
+      últimos 4s → silêncio absoluto (música faz fade out)
+      fim     → micro-fade 0.1s para loop imperceptível
+
+    Layout visual (relativo ao ecrã):
+      0.08 → Gancho (primeiros 4s)
+      0.68 → Legendas Whisper sincronizadas
+      0.88 → CTA fixo (últimos 4s)
 
     Returns:
         str: Caminho para short_final.mp4
@@ -379,70 +554,197 @@ def edit_short_video(
 
     output_path = Path(output_dir) / "short_final.mp4"
 
-    # Carregar áudio
+    # Carregar narração
     audio = AudioFileClip(audio_path)
     duration = min(audio.duration, SHORT_MAX_DURATION)
     logger.info(f"  Duração do Short: {duration:.1f}s")
 
-    # Música de fundo
     import random
     from moviepy.audio.fx.all import audio_loop, volumex
     from moviepy.editor import CompositeAudioClip
 
-    music_dir = Path(__file__).parent.parent / "assets" / "music"
-    music_files = list(music_dir.glob("*.mp3"))
+    sounds_dir = Path(__file__).parent.parent / "assets" / "signature_sounds"
+    music_dir  = Path(__file__).parent.parent / "assets" / "music"
 
+    audio_layers = [audio]  # narração sempre presente
+
+    # ── Música ambiente (fundo) ──────────────────────────────────────────
+    music_files = list(music_dir.glob("*.mp3"))
     if music_files:
         music_path = random.choice(music_files)
         logger.info(f"  🎵 Música: {music_path.name}")
         music = AudioFileClip(str(music_path))
         music = audio_loop(music, duration=duration)
-        music = volumex(music, 0.06)
-        music = music.audio_fadein(1.5).audio_fadeout(2.0)
-        final_audio = CompositeAudioClip([audio, music])
+        music = volumex(music, 0.05)          # 5% — abaixo dos efeitos
+        music = music.audio_fadein(1.5)
+        music = music.audio_fadeout(4.0)      # silêncio nos últimos 4s
+        audio_layers.append(music)
     else:
         logger.warning("  ⚠ Nenhuma música encontrada em assets/music/")
-        final_audio = audio
+
+    # ── Heavy Wind (hook — primeiros 5s) ────────────────────────────────
+    wind_path = sounds_dir / "heavy_wind.wav"
+    if wind_path.exists():
+        try:
+            wind = AudioFileClip(str(wind_path))
+            wind_duration = min(5.0, wind.duration)
+            wind = wind.subclip(0, wind_duration)
+            wind = volumex(wind, 0.35)        # destacado mas não sobrepõe a voz
+            wind = wind.audio_fadein(0.3).audio_fadeout(1.5)
+            wind = wind.set_start(0)
+            audio_layers.append(wind)
+            logger.info(f"  💨 Wind: {wind_duration:.1f}s no hook")
+        except Exception as e:
+            logger.warning(f"  ⚠ Wind falhou: {e}")
+    else:
+        logger.warning("  ⚠ heavy_wind.wav não encontrado em assets/signature_sounds/")
+
+    # ── Stoic Bell (momento do filósofo — detectado via Whisper) ────────
+    bell_path = sounds_dir / "stoic_bell.wav"
+    bell_trigger_time = None
+
+    # Detectar timestamp do filósofo via palavras do Whisper
+    whisper_words = _generate_subtitles(audio_path)
+    philosopher_names = {"marcus", "aurelius", "seneca", "epictetus"}
+    if whisper_words:
+        for w in whisper_words:
+            if hasattr(w, 'word') and w.word.lower().strip(".,") in philosopher_names:
+                bell_trigger_time = max(0, w.start - 0.2)  # 0.2s antes da palavra
+                logger.info(f"  🔔 Bell trigger: '{w.word}' em {bell_trigger_time:.1f}s")
+                break
+
+    if bell_trigger_time is None:
+        # Fallback: disparar a 30% da duração
+        bell_trigger_time = duration * 0.30
+        logger.info(f"  🔔 Bell trigger (fallback): {bell_trigger_time:.1f}s")
+
+    if bell_path.exists():
+        try:
+            bell = AudioFileClip(str(bell_path))
+            bell_use_duration = min(5.0, bell.duration, duration - bell_trigger_time)
+            bell = bell.subclip(0, bell_use_duration)
+            bell = volumex(bell, 0.28)        # presente mas não abafa a voz
+            bell = bell.audio_fadein(0.1).audio_fadeout(2.0)
+            bell = bell.set_start(bell_trigger_time)
+            audio_layers.append(bell)
+
+            # Ducking da música no momento do bell (baixa para 2% durante 4s)
+            if music_files:
+                music_duck = AudioFileClip(str(music_path))
+                music_duck = audio_loop(music_duck, duration=duration)
+                duck_start = bell_trigger_time
+                duck_end   = min(bell_trigger_time + 4.0, duration - 4.0)
+                if duck_end > duck_start:
+                    music_duck = music_duck.subclip(duck_start, duck_end)
+                    music_duck = volumex(music_duck, -0.03)  # compensa o 5% base → ~2%
+                    music_duck = music_duck.audio_fadein(0.3).audio_fadeout(0.5)
+                    music_duck = music_duck.set_start(duck_start)
+                    audio_layers.append(music_duck)
+
+            logger.info(f"  🔔 Bell: {bell_use_duration:.1f}s a partir de {bell_trigger_time:.1f}s")
+        except Exception as e:
+            logger.warning(f"  ⚠ Bell falhou: {e}")
+    else:
+        logger.warning("  ⚠ stoic_bell.wav não encontrado em assets/signature_sounds/")
+
+    # ── Micro-fade final (0.1s) para loop imperceptível ─────────────────
+    try:
+        audio = audio.audio_fadeout(0.1)
+        audio_layers[0] = audio
+    except Exception:
+        pass
+
+    # ── Compor todas as camadas de áudio ────────────────────────────────
+    final_audio = CompositeAudioClip(audio_layers).subclip(0, duration)
+    logger.info(f"  🎚  Audio layers: {len(audio_layers)} (narração + música + wind + bell)")
 
     layers = []
-
-    # 1. Vídeo de fundo vertical
-    bg_clip = _make_vertical_clip(video_bg_path, duration)
-
-    # Escurecer ligeiramente para melhor legibilidade
     from moviepy.video.fx.all import colorx
-    bg_clip = colorx(bg_clip, 0.7)
-    layers.append(bg_clip)
 
-    # 2. Overlay escuro semi-transparente no terço inferior (para legibilidade)
-    dark_bar = ColorClip(
-        size=(SHORT_WIDTH, 500),
-        color=(0, 0, 0),
-        duration=duration
-    ).set_opacity(0.5).set_position(("center", SHORT_HEIGHT - 550))
-    layers.append(dark_bar)
+    # 1. Vídeo de fundo
+    cenas_visuais = short_data.get("cenas_visuais", [])
+    if scene_video_paths and len(scene_video_paths) == len(cenas_visuais) and len(cenas_visuais) == 4:
+        # Usar vídeos diferentes por cena, divididos em 4 partes iguais
+        logger.info("  🎬 Montando vídeo de fundo com cenas múltiplas...")
+        part_duration = duration / 4
+        bg_clips = []
+        for i, vpath in enumerate(scene_video_paths):
+            if vpath and Path(vpath).exists():
+                try:
+                    clip = _make_vertical_clip(vpath, part_duration)
+                    clip = colorx(clip, 0.7)
+                    clip = clip.set_start(i * part_duration)
+                    bg_clips.append(clip)
+                except Exception as e:
+                    logger.warning(f"  ⚠ Cena {i} falhou: {e}")
+        if bg_clips:
+            layers.extend(bg_clips)
+        else:
+            bg_clip = _make_vertical_clip(video_bg_path, duration)
+            bg_clip = _apply_ken_burns(bg_clip)
+            layers.append(colorx(bg_clip, 0.7))
+    else:
+        # Fallback: vídeo único para o Short todo
+        bg_clip = _make_vertical_clip(video_bg_path, duration)
+        bg_clip = _apply_ken_burns(bg_clip)
+        layers.append(colorx(bg_clip, 0.7))
 
-    # 3. Texto do gancho (primeiros 4 segundos, no topo)
+    # 2. Legendas Whisper sincronizadas — posição 0.68
+    # Reutiliza whisper_words já obtido no sound design (sem segunda chamada à API)
+    words = whisper_words if whisper_words else []
+    if words:
+        chunk_size = 4
+        chunks = [words[i:i+chunk_size] for i in range(0, len(words), chunk_size)]
+        for chunk in chunks:
+            if not chunk:
+                continue
+            chunk_text = " ".join([w.word for w in chunk])
+            start = chunk[0].start
+            end = chunk[-1].end
+            chunk_duration = end - start
+            if chunk_duration <= 0:
+                continue
+            try:
+                sub = TextClip(
+                    chunk_text,
+                    fontsize=65,
+                    font="Arial-Bold",
+                    color="white",
+                    stroke_color="black",
+                    stroke_width=3,
+                    method="caption",
+                    size=(SHORT_WIDTH - 100, None),
+                    align="center"
+                ).set_start(start).set_duration(chunk_duration).set_position(("center", 0.68), relative=True)
+                layers.append(sub)
+            except Exception:
+                pass
+
+    # 3. Gancho no topo (primeiros 4 segundos) — posição 0.08
     gancho = short_data.get("texto_gancho", "")
     if gancho:
         gancho_clip = _create_text_overlay(gancho, min(4.0, duration), position="top")
         layers.append(gancho_clip)
 
-    # 4. Legenda CTA (últimos 4 segundos, em baixo)
-    cta_text = short_data.get("legenda_cta", "Follow for more 🔥")
+    # 4. CTA rotativo nos últimos 4 segundos — safe zone 0.84
+    cta_text = _get_cta_text(duration)
+    logger.info(f"  💬 CTA: '{cta_text}'")
     if duration > 6:
         cta_start = duration - 4
         cta_clip = _create_text_overlay(cta_text, 4.0, position="bottom")
         cta_clip = cta_clip.set_start(cta_start)
         layers.append(cta_clip)
 
-    # Compor todos os layers
+    # Compor o Short — SEM ecrã preto no fim (loop infinito para retenção)
+    # O YouTube interpreta ecrã preto como "fim de sessão" e perde retenção
+    # Com corte directo, o espectador vê 1.5x o vídeo antes de perceber que repetiu
     final = CompositeVideoClip(layers, size=(SHORT_WIDTH, SHORT_HEIGHT))
     final = final.set_audio(final_audio.subclip(0, duration))
     final = final.set_duration(duration)
-    final = final.fadein(0.5).fadeout(0.5)
+    final = final.fadein(0.3)
+    # Sem fadeout — corte abrupto para loop perfeito
 
-    logger.info(f"  A renderizar Short → {output_path}")
+    logger.info(f"  A renderizar Short → {output_path} ({duration:.1f}s, loop directo)")
     logger.info("  (Short rendering em curso...)")
 
     try:
@@ -482,17 +784,14 @@ def upload_short(youtube, short_data: dict, video_path: str, thumbnail_path: str
 
     from googleapiclient.errors import HttpError
 
-    # Título com #Shorts obrigatório
     titulo = short_data.get("titulo_short", "")
     if "#Shorts" not in titulo and "#shorts" not in titulo:
         titulo = titulo[:54] + " #Shorts"
 
-    # Tags com #Shorts obrigatório
     tags = short_data.get("hashtags", ["#Shorts"])
     if "#Shorts" not in tags and "#shorts" not in tags:
         tags.insert(0, "#Shorts")
 
-    # Descrição otimizada para Shorts
     descricao = (
         f"{short_data.get('texto_gancho', '')}\n\n"
         f"{'  '.join(tags)}\n\n"
@@ -533,7 +832,6 @@ def upload_short(youtube, short_data: dict, video_path: str, thumbnail_path: str
 
         video_id = response["id"]
 
-        # Thumbnail
         try:
             from PIL import Image
             compressed_thumb = thumbnail_path.replace(".jpg", "_short_compressed.jpg")
@@ -546,6 +844,7 @@ def upload_short(youtube, short_data: dict, video_path: str, thumbnail_path: str
             logger.info("  ✓ Thumbnail do Short definida")
         except HttpError as e:
             logger.warning(f"  ⚠ Thumbnail do Short falhou: {e}")
+
         url = f"https://www.youtube.com/shorts/{video_id}"
         logger.info(f"  ✓ Short publicado → {url}")
         return url
@@ -586,35 +885,44 @@ def generate_and_upload_short(
     logger.info("MÓDULO 6: GERADOR DE SHORTS")
     logger.info("=" * 60)
 
-    # Pasta separada para ficheiros do Short
     short_dir = str(Path(temp_dir) / "short")
     Path(short_dir).mkdir(parents=True, exist_ok=True)
 
-    # 6a. Selecionar melhor cena e reescrever para formato Short
     short_data = select_best_scene(script_data)
 
-    # 6b. Gerar narração
     audio_path = generate_short_narration(
         short_data["texto_narrado"],
         short_dir,
         voice_id
     )
 
-    # 6c. Descarregar vídeo vertical
+    # Fallback: vídeo único para todo o Short
     video_bg_path = download_vertical_video(
         short_data["palavra_chave_visual"],
         short_dir
     )
 
-    # 6d. Editar vídeo Short
+    # Multi-cena: vídeo diferente por parte (hook/teaching/practice/outro)
+    scene_video_paths = None
+    cenas_visuais = short_data.get("cenas_visuais", [])
+    if len(cenas_visuais) == 4:
+        logger.info("  🎬 Modo multi-cena activado (4 videos diferentes)")
+        scene_video_paths = download_multi_scene_videos(
+            cenas_visuais=cenas_visuais,
+            fallback_keyword=short_data["palavra_chave_visual"],
+            output_dir=short_dir
+        )
+    else:
+        logger.info("  Info: Modo video unico (cenas_visuais nao disponiveis)")
+
     short_video_path = edit_short_video(
         audio_path=audio_path,
         video_bg_path=video_bg_path,
         short_data=short_data,
-        output_dir=short_dir
+        output_dir=short_dir,
+        scene_video_paths=scene_video_paths
     )
 
-    # 6e. Upload
     short_url = upload_short(
         youtube=youtube_service,
         short_data=short_data,

@@ -1,0 +1,722 @@
+[
+  {
+    "id": 1,
+    "tema": "The Philosophy of Death",
+    "filosofos": ["Marcus Aurelius", "Seneca", "Epictetus"],
+    "tese_central": "The Stoics did not fear death — they used it as a tool to live with urgency and clarity.",
+    "arco_narrativo": [
+      {
+        "parte": "hook",
+        "titulo": "The One Truth Everyone Avoids",
+        "conteudo": "Most people spend their entire lives running from the one certainty they cannot escape: death. The Stoics ran toward it.",
+        "palavra_chave_visual": "dark misty graveyard ancient"
+      },
+      {
+        "parte": "contexto",
+        "titulo": "Memento Mori — The Stoic Practice",
+        "conteudo": "Marcus Aurelius began every morning by reminding himself he would die. Not as a morbid ritual — but as a compass. 'Think often of the swiftness with which things pass away.' He wrote this while commanding armies and burying children.",
+        "palavra_chave_visual": "ancient rome emperor statue"
+      },
+      {
+        "parte": "desenvolvimento",
+        "titulo": "Seneca's Letter to the Dying",
+        "conteudo": "Seneca wrote 124 letters to his friend Lucilius knowing Nero would order his death soon. Each letter was about how to live — not how to survive. 'It is not that I have courage to die. It is that I have learned what life is for.'",
+        "palavra_chave_visual": "ancient scroll candlelight writing"
+      },
+      {
+        "parte": "climax",
+        "titulo": "Epictetus: The Slave Who Had Nothing to Lose",
+        "conteudo": "Epictetus owned nothing. His master broke his leg. He was exiled by the Emperor. And yet he taught that the man who fears death is already a slave. 'Never say I lost something. Say I gave it back.' Even life itself.",
+        "palavra_chave_visual": "broken chains stone floor ancient"
+      },
+      {
+        "parte": "pratica",
+        "titulo": "The Daily Practice of Mortality",
+        "conteudo": "Tonight, before you sleep, ask: if this were my last day, would I have lived it differently? Not to create anxiety — but to eliminate the trivial. Death is the ultimate editor of your priorities.",
+        "palavra_chave_visual": "candle flame dark background"
+      },
+      {
+        "parte": "conclusao",
+        "titulo": "The Sovereign Who Accepts the End",
+        "conteudo": "The man who has made peace with death fears nothing. Not failure, not humiliation, not loss. He moves through the world as a sovereign — because he has already surrendered the one thing we all must surrender.",
+        "palavra_chave_visual": "mountain peak sunrise cinematic"
+      }
+    ],
+    "problema_moderno": "Fear of death causing avoidance of risk, meaningful action, and authentic living.",
+    "emocao_central": "existential fear transformed into urgency",
+    "duracao_estimada": "7-9 minutos",
+    "prompt_thumbnail": "A cinematic dark portrait of a Roman emperor sitting alone in candlelight, looking at an hourglass, stone walls, dramatic chiaroscuro lighting, hyperrealistic, no text"
+  },
+  {
+    "id": 2,
+    "tema": "The Dichotomy of Control",
+    "filosofos": ["Epictetus", "Marcus Aurelius"],
+    "tese_central": "There are only two categories in life: what you control and what you do not. Confusing them is the source of all suffering.",
+    "arco_narrativo": [
+      {
+        "parte": "hook",
+        "titulo": "You Are Suffering Over Things That Were Never Yours",
+        "conteudo": "Your reputation. Other people's opinions. The economy. Your body's illness. You have spent years trying to control things that were never yours to control. The Stoics had a name for this confusion: the root of all misery.",
+        "palavra_chave_visual": "storm dark ocean waves dramatic"
+      },
+      {
+        "parte": "contexto",
+        "titulo": "Epictetus: The Handbook of Freedom",
+        "conteudo": "Epictetus opened his Enchiridion with a single distinction: some things are in our power, others are not. In our power: our judgements, impulses, desires, aversions. Not in our power: our body, reputation, command, property. This one idea, if truly understood, changes everything.",
+        "palavra_chave_visual": "ancient greek philosophy scroll stone"
+      },
+      {
+        "parte": "desenvolvimento",
+        "titulo": "Marcus Aurelius Under Impossible Pressure",
+        "conteudo": "Marcus Aurelius faced 20 years of war, plague, betrayal and the death of his children. He could not control any of these events. What he controlled was his response. 'You have power over your mind, not outside events. Realize this and you will find strength.'",
+        "palavra_chave_visual": "ancient rome war battle cinematic"
+      },
+      {
+        "parte": "climax",
+        "titulo": "The Modern Trap: Anxiety as Illusion of Control",
+        "conteudo": "Anxiety is the mind's attempt to control what it cannot. Worrying about a flight crash does not make the plane safer. Obsessing over what others think does not change their minds. All it does is consume the energy you need for what you actually can control.",
+        "palavra_chave_visual": "person alone dark room thinking"
+      },
+      {
+        "parte": "pratica",
+        "titulo": "The Two-Column Exercise",
+        "conteudo": "Take a piece of paper. Draw a line down the middle. On the left: everything causing you stress. On the right: which of those are actually within your control. Most columns on the right will be nearly empty. That is your liberation.",
+        "palavra_chave_visual": "paper writing pen dark desk"
+      },
+      {
+        "parte": "conclusao",
+        "titulo": "The Unshakable Man",
+        "conteudo": "The man who has internalized this distinction cannot be broken. Take his money — he still has his virtue. Destroy his reputation — he still has his character. Exile him — he carries his citadel within. This is the Stoic promise: a freedom no external force can revoke.",
+        "palavra_chave_visual": "lone figure mountain fog cinematic"
+      }
+    ],
+    "problema_moderno": "Anxiety, need for external validation, inability to accept uncertainty.",
+    "emocao_central": "anxiety transformed into clarity and focus",
+    "duracao_estimada": "7-9 minutos",
+    "prompt_thumbnail": "A solitary Roman philosopher standing at the edge of a cliff in a storm, completely calm, dramatic dark sky, cinematic lighting, hyperrealistic, no text"
+  },
+  {
+    "id": 3,
+    "tema": "Amor Fati — Love Your Fate",
+    "filosofos": ["Marcus Aurelius", "Seneca"],
+    "tese_central": "The Stoics did not merely accept what happened to them — they loved it. Every obstacle was raw material for virtue.",
+    "arco_narrativo": [
+      {
+        "parte": "hook",
+        "titulo": "What If Everything That Happened To You Was Necessary?",
+        "conteudo": "Not just acceptable. Not just survivable. Necessary. What if your failures, your losses, your betrayals were not punishments — but the exact curriculum your character required?",
+        "palavra_chave_visual": "dark storm lightning dramatic sky"
+      },
+      {
+        "parte": "contexto",
+        "titulo": "Marcus Aurelius: The Emperor Who Lost Everything",
+        "conteudo": "Marcus Aurelius lost five children. He governed through the worst plague in Roman history. His most trusted general betrayed him. And yet in the Meditations he wrote: 'A blazing fire makes flame and brightness out of everything that is thrown into it.' He did not endure his fate. He used it.",
+        "palavra_chave_visual": "roman ruins dramatic fire torches"
+      },
+      {
+        "parte": "desenvolvimento",
+        "titulo": "The Obstacle Is the Way",
+        "conteudo": "The Stoic formula was precise: the impediment to action advances action. What stands in the way becomes the way. When the plague hit Rome, Marcus did not collapse — he became the steady centre that held the empire together. The obstacle forged the emperor.",
+        "palavra_chave_visual": "stone path through dark forest"
+      },
+      {
+        "parte": "climax",
+        "titulo": "Seneca on Voluntary Hardship",
+        "conteudo": "Seneca practiced deliberately seeking discomfort. He slept on the floor. He ate poorly by choice. He walked in cold weather without a cloak. Not for suffering's sake — but to prove to himself that fate's worst blows had already been rehearsed. 'Set aside a certain number of days during which you shall be content with the scantiest and cheapest fare.'",
+        "palavra_chave_visual": "ancient rome simple stone room sparse"
+      },
+      {
+        "parte": "pratica",
+        "titulo": "Reframe the Wound",
+        "conteudo": "Think of your greatest failure. Now ask: what quality did it force you to develop that you would not have developed otherwise? Patience? Humility? Resilience? The wound was the teacher. Amor Fati is not pretending pain does not exist — it is extracting the lesson with such precision that the pain becomes purpose.",
+        "palavra_chave_visual": "person looking at horizon dark dramatic"
+      },
+      {
+        "parte": "conclusao",
+        "titulo": "The Man Who Cannot Be Defeated",
+        "conteudo": "When you love your fate, you become invincible — not because nothing bad happens to you, but because nothing bad can diminish you. Every blow is a chisel. Every loss is a teacher. Every betrayal is a test you were meant to pass. This is Amor Fati. This is the Stoic's secret weapon.",
+        "palavra_chave_visual": "warrior silhouette sunset dramatic"
+      }
+    ],
+    "problema_moderno": "Victim mentality, inability to find meaning in suffering, resistance to adversity.",
+    "emocao_central": "resentment transformed into purposeful acceptance",
+    "duracao_estimada": "7-9 minutos",
+    "prompt_thumbnail": "A Roman warrior standing in ruins after a battle, looking upward, fire in the background, dramatic dark cinematic lighting, determined expression, hyperrealistic, no text"
+  },
+  {
+    "id": 4,
+    "tema": "The Corruption of Comfort",
+    "filosofos": ["Seneca", "Musonius Rufus", "Marcus Aurelius"],
+    "tese_central": "The Stoics warned that comfort is the silent killer of virtue. The easier your life becomes, the weaker your character grows.",
+    "arco_narrativo": [
+      {
+        "parte": "hook",
+        "titulo": "Comfort Is Killing You Slowly",
+        "conteudo": "Not with violence. Not with tragedy. With softness. With ease. With the slow erosion of every quality that makes a human being capable of facing reality. The Stoics saw this coming two thousand years ago.",
+        "palavra_chave_visual": "luxury empty dark room shadows"
+      },
+      {
+        "parte": "contexto",
+        "titulo": "Seneca's Warning on Wealth",
+        "conteudo": "Seneca was one of the wealthiest men in Rome. And he spent his life writing about why wealth was dangerous. Not because money is evil — but because it removes the friction that builds character. 'It is not the man who has little who is poor, but the man who craves more.'",
+        "palavra_chave_visual": "ancient rome wealthy villa opulent"
+      },
+      {
+        "parte": "desenvolvimento",
+        "titulo": "Musonius Rufus and the Simple Life",
+        "conteudo": "Musonius Rufus, called the Roman Socrates, ate only vegetables and practised manual labour as philosophy. He taught that the body must be trained in discomfort so the mind is never at the mercy of comfort's absence. His students were senators and generals. He made them farm.",
+        "palavra_chave_visual": "ancient roman farm simple life stone"
+      },
+      {
+        "parte": "climax",
+        "titulo": "Marcus Aurelius Against the Palace",
+        "conteudo": "Marcus Aurelius was born into the most comfortable life in the known world. He chose to sleep on a soldier's mat during campaigns. He fasted regularly. He refused the excesses of the imperial court. 'Confine yourself to the present.' Not to the pleasures the present offers — to the duties it demands.",
+        "palavra_chave_visual": "roman emperor soldier camp austere"
+      },
+      {
+        "parte": "pratica",
+        "titulo": "The Voluntary Discomfort Protocol",
+        "conteudo": "Once a week, remove one comfort deliberately. Sleep without a pillow. Skip a meal. Take a cold shower. Walk instead of driving. Not to suffer — but to remind your nervous system that you are the master, not the comfort. The man who can choose discomfort cannot be controlled by its absence.",
+        "palavra_chave_visual": "cold water shower discipline dark"
+      },
+      {
+        "parte": "conclusao",
+        "titulo": "The Fortress Built by Hardship",
+        "conteudo": "Every time you choose difficulty over ease, you add a stone to your internal citadel. The man of comfort crumbles at the first storm. The man of chosen hardship stands. Not because he is stronger by nature — but because he has built his strength deliberately, one chosen difficulty at a time.",
+        "palavra_chave_visual": "stone fortress dark dramatic sky"
+      }
+    ],
+    "problema_moderno": "Addiction to convenience, lack of discipline, inability to tolerate discomfort.",
+    "emocao_central": "complacency transformed into disciplined action",
+    "duracao_estimada": "7-9 minutos",
+    "prompt_thumbnail": "A stark contrast between a crumbling palace of gold and a simple stone fortress on a hill, dark dramatic sky, cinematic, hyperrealistic, no text"
+  },
+  {
+    "id": 5,
+    "tema": "Anger — The Temporary Madness",
+    "filosofos": ["Seneca", "Marcus Aurelius"],
+    "tese_central": "The Stoics considered anger the most dangerous emotion — a brief insanity that destroys in seconds what took years to build.",
+    "arco_narrativo": [
+      {
+        "parte": "hook",
+        "titulo": "Every Time You Lose Your Temper, You Lose",
+        "conteudo": "Not just the argument. Not just the moment. You lose a piece of the person you are trying to become. Seneca called anger 'temporary madness.' He was not speaking metaphorically.",
+        "palavra_chave_visual": "storm dark dramatic lightning clouds"
+      },
+      {
+        "parte": "contexto",
+        "titulo": "Seneca's De Ira — On Anger",
+        "conteudo": "Seneca wrote three books entirely on anger — the most extensive treatment of a single emotion in ancient philosophy. He described anger as 'the most hideous and frenzied of all the emotions.' Not because it feels bad — but because it makes you someone else. Someone you would not choose to be.",
+        "palavra_chave_visual": "ancient roman philosophy writing stone"
+      },
+      {
+        "parte": "desenvolvimento",
+        "titulo": "Marcus Aurelius and the Daily Battle",
+        "conteudo": "Marcus Aurelius fought anger every day. He wrote to himself: 'When you wake up in the morning, tell yourself: the people I deal with today will be meddling, ungrateful, arrogant, dishonest, jealous and surly.' He prepared for provocation so it could not provoke him. He was Emperor — he could destroy anyone who angered him. He chose not to.",
+        "palavra_chave_visual": "roman emperor court cinematic dramatic"
+      },
+      {
+        "parte": "climax",
+        "titulo": "What Anger Actually Costs",
+        "conteudo": "Every outburst of anger is a transfer of power. You give the person who provoked you complete control over your emotional state. They push a button and you perform. The Stoic sees this and refuses. Not out of weakness — out of sovereignty. Your peace is not for sale.",
+        "palavra_chave_visual": "chess game strategy dark dramatic"
+      },
+      {
+        "parte": "pratica",
+        "titulo": "The Pause That Changes Everything",
+        "conteudo": "Between stimulus and response there is a space. In that space lives your freedom. When you feel anger rising, count to ten. Not to suppress — to reclaim the authorship of your next action. Seneca wrote: 'The best cure for anger is delay.' Not forever. Just long enough for reason to return.",
+        "palavra_chave_visual": "hourglass dark dramatic sand falling"
+      },
+      {
+        "parte": "conclusao",
+        "titulo": "The Cold Fire of Stoic Strength",
+        "conteudo": "The Stoic does not eliminate his passions — he masters them. Controlled anger becomes resolve. Transformed frustration becomes discipline. The man who never loses his temper is not cold — he is burning with a fire that he has chosen to direct. That is not weakness. That is the highest form of strength.",
+        "palavra_chave_visual": "controlled fire dark dramatic forge"
+      }
+    ],
+    "problema_moderno": "Emotional reactivity, loss of relationships and opportunities due to uncontrolled anger.",
+    "emocao_central": "reactive anger transformed into sovereign composure",
+    "duracao_estimada": "7-9 minutos",
+    "prompt_thumbnail": "A Roman stoic philosopher sitting completely still in the eye of a storm, fire and chaos around him, calm expression, dramatic cinematic lighting, hyperrealistic, no text"
+  },
+  {
+    "id": 6,
+    "tema": "The Art of Dying Well",
+    "filosofos": ["Seneca", "Marcus Aurelius"],
+    "tese_central": "For the Stoics, how you die is the final proof of how you lived. Seneca's death was his greatest philosophical act.",
+    "arco_narrativo": [
+      {
+        "parte": "hook",
+        "titulo": "Your Death Will Reveal Everything",
+        "conteudo": "Every philosophy is eventually tested by a single moment: the moment of death. The Stoics knew this. They prepared for it their entire lives. Not with prayer — with practice.",
+        "palavra_chave_visual": "dark corridor candlelight ancient stone"
+      },
+      {
+        "parte": "contexto",
+        "titulo": "Seneca's Final Evening",
+        "conteudo": "When Nero's soldiers arrived to deliver the death order, Seneca was 70 years old. He had been preparing for this moment for decades. He cut his wrists, gathered his friends around him, and continued dictating his philosophy until the end. He died exactly as he had lived: teaching.",
+        "palavra_chave_visual": "ancient roman villa evening dramatic"
+      },
+      {
+        "parte": "desenvolvimento",
+        "titulo": "Marcus Aurelius: The Emperor's Last Words",
+        "conteudo": "Marcus Aurelius died during a military campaign on the Danube frontier, far from Rome. His last recorded words to his guards were: 'Go to the rising sun, for I am setting.' He did not ask for his family. He did not lament. He used a metaphor. Even in dying, he was a philosopher.",
+        "palavra_chave_visual": "sunset dramatic military camp ancient"
+      },
+      {
+        "parte": "climax",
+        "titulo": "Why the Stoics Were Not Afraid",
+        "conteudo": "The Stoics were not afraid of death because they had already rehearsed it — through Memento Mori, through voluntary poverty, through the daily practice of releasing what was not theirs. Death was not the end of life. It was the final examination of everything they had practiced.",
+        "palavra_chave_visual": "stone statue ancient philosophy dark"
+      },
+      {
+        "parte": "pratica",
+        "titulo": "Write Your Eulogy Now",
+        "conteudo": "Sit down and write the eulogy you would want spoken at your funeral. Not what you hope people will say — what they would say if you died today. Then ask: is there a gap? That gap is your work. Not tomorrow. Today.",
+        "palavra_chave_visual": "pen paper dark desk candlelight"
+      },
+      {
+        "parte": "conclusao",
+        "titulo": "A Life That Needs No Apology",
+        "conteudo": "The Stoic goal was simple: to live in such a way that when death arrived, there was nothing left to regret. No unlived life. No withheld truth. No abandoned virtue. Death is not the enemy — a wasted life is. Make peace with the end. And then go live.",
+        "palavra_chave_visual": "lone figure dark horizon dramatic"
+      }
+    ],
+    "problema_moderno": "Fear of legacy, unlived life, avoidance of meaningful risk.",
+    "emocao_central": "fear of death transformed into urgency to live fully",
+    "duracao_estimada": "7-9 minutos",
+    "prompt_thumbnail": "A Roman philosopher at peace, eyes closed, surrounded by candles in a dark stone chamber, serene yet powerful atmosphere, cinematic chiaroscuro, hyperrealistic, no text"
+  },
+  {
+    "id": 7,
+    "tema": "Solitude and the Inner Citadel",
+    "filosofos": ["Marcus Aurelius", "Seneca"],
+    "tese_central": "The Stoics cultivated solitude as a discipline — the ability to retreat into oneself and find there everything needed.",
+    "arco_narrativo": [
+      {
+        "parte": "hook",
+        "titulo": "You Cannot Escape Yourself",
+        "conteudo": "Travel to a new country. Change your career. End your relationship. Start over. You will arrive at the new life carrying the same mind. The Stoics knew this. Their solution was not to escape — but to master the one place you will inhabit forever: your inner world.",
+        "palavra_chave_visual": "lone traveller dark misty road"
+      },
+      {
+        "parte": "contexto",
+        "titulo": "Marcus Aurelius: The Meditations as Refuge",
+        "conteudo": "The Meditations were never meant to be published. They were Marcus Aurelius writing to himself — retreating into his inner citadel in the middle of wars, plagues and political chaos. 'Nowhere can man find a quieter or more untroubled retreat than in his own soul.' He meant this literally.",
+        "palavra_chave_visual": "ancient roman tent writing candlelight"
+      },
+      {
+        "parte": "desenvolvimento",
+        "titulo": "Seneca's Exile as Liberation",
+        "conteudo": "When Seneca was exiled to Corsica, stripped of power and wealth, he discovered something unexpected: he had everything he needed inside himself. He wrote his most profound works in exile. The solitude that was meant to punish him became his greatest teacher.",
+        "palavra_chave_visual": "rocky island sea dark dramatic"
+      },
+      {
+        "parte": "climax",
+        "titulo": "The Noise That Prevents Knowing Yourself",
+        "conteudo": "Seneca wrote: 'Retire into yourself as much as you can.' He saw that the crowd — with its opinions, distractions, and constant noise — was the enemy of self-knowledge. The man who cannot be alone with himself is a stranger to himself. And a stranger to himself cannot know what he truly values.",
+        "palavra_chave_visual": "busy crowd dark blur contrast"
+      },
+      {
+        "parte": "pratica",
+        "titulo": "The Daily Retreat",
+        "conteudo": "Each day, carve out twenty minutes of deliberate solitude. No phone. No music. No distraction. Sit with your thoughts. Examine your day. Ask: did I act according to my values? Did I react or respond? This is not meditation — it is philosophy applied. This is the inner citadel being maintained.",
+        "palavra_chave_visual": "person alone dark room window light"
+      },
+      {
+        "parte": "conclusao",
+        "titulo": "The Man Who Needs Nothing from the Crowd",
+        "conteudo": "When you have built your inner citadel, the crowd loses its power over you. Their approval becomes irrelevant. Their criticism becomes information rather than wounds. You move through the world with the quiet confidence of a man who knows that everything he truly needs, he already has.",
+        "palavra_chave_visual": "lone figure mountain peak dramatic sky"
+      }
+    ],
+    "problema_moderno": "Fear of solitude, social media addiction, inability to be alone with oneself.",
+    "emocao_central": "loneliness transformed into sovereign solitude",
+    "duracao_estimada": "7-9 minutos",
+    "prompt_thumbnail": "A Roman emperor alone in a vast dark stone library, reading by candlelight, dramatic shadows, complete solitude, cinematic hyperrealistic, no text"
+  },
+  {
+    "id": 8,
+    "tema": "Time — The Only Currency That Matters",
+    "filosofos": ["Seneca", "Marcus Aurelius"],
+    "tese_central": "The Stoics were obsessed with time — not as a resource to be managed, but as the only true measure of a life.",
+    "arco_narrativo": [
+      {
+        "parte": "hook",
+        "titulo": "You Are Spending Your Life. Are You Buying Anything Worth Having?",
+        "conteudo": "Every hour you spend is gone forever. You cannot earn it back, borrow more, or negotiate an extension. The Stoics understood this with an urgency that modern life has completely forgotten.",
+        "palavra_chave_visual": "hourglass dark dramatic sand"
+      },
+      {
+        "parte": "contexto",
+        "titulo": "De Brevitate Vitae — On the Shortness of Life",
+        "conteudo": "Seneca opened his masterpiece with a provocation: 'It is not that we have a short time to live, but that we waste a great deal of it.' He wrote this knowing he would be killed soon. He was not complaining about life's brevity — he was diagnosing humanity's self-inflicted blindness.",
+        "palavra_chave_visual": "ancient roman scroll writing dark"
+      },
+      {
+        "parte": "desenvolvimento",
+        "titulo": "What Seneca Called the Living Dead",
+        "conteudo": "Seneca described men who filled their days with banquets, politics, and empty ambition as 'the living dead' — physically alive but fundamentally absent from their own existence. 'They are not living but passing through life.' Sound familiar?",
+        "palavra_chave_visual": "busy city dark dramatic crowd blur"
+      },
+      {
+        "parte": "climax",
+        "titulo": "Marcus Aurelius and the Brevity of Everything",
+        "conteudo": "Marcus Aurelius wrote: 'How many a Chrysippus, how many a Socrates, how many an Epictetus, have time already swallowed up?' Even the greatest minds, the most powerful emperors — time devoured them all. His response was not despair but discipline: do what matters, now.",
+        "palavra_chave_visual": "ancient ruins time decay dramatic"
+      },
+      {
+        "parte": "pratica",
+        "titulo": "The Mortality Calculation",
+        "conteudo": "If you are 35 years old and live to 80, you have approximately 16,425 days left. Each morning one is removed. Not as a threat — as a clarification. What are you doing with today's allocation? The Stoic does not hoard time. He spends it with brutal intentionality.",
+        "palavra_chave_visual": "calendar days dark dramatic numbers"
+      },
+      {
+        "parte": "conclusao",
+        "titulo": "The Man Who Owns His Time",
+        "conteudo": "Seneca's final wisdom: 'Omnia aliena sunt, tempus tantum nostrum est.' Everything is borrowed. Only time is truly ours. The man who guards his time guards his life. Spend it on what builds virtue, deepens understanding, or serves those who matter. Everything else is theft — and you are the one being robbed.",
+        "palavra_chave_visual": "lone figure sunrise dramatic horizon"
+      }
+    ],
+    "problema_moderno": "Time wasted on trivial distractions, procrastination, living without intention.",
+    "emocao_central": "complacency about time transformed into fierce intentionality",
+    "duracao_estimada": "7-9 minutos",
+    "prompt_thumbnail": "A giant hourglass in a dark Roman chamber, sand almost gone, dramatic lighting, a lone figure watching, cinematic hyperrealistic, no text"
+  },
+  {
+    "id": 9,
+    "tema": "Virtue as the Only Good",
+    "filosofos": ["Marcus Aurelius", "Epictetus", "Seneca"],
+    "tese_central": "The Stoics made a radical claim: only virtue is truly good. Everything else — wealth, health, reputation, pleasure — is indifferent.",
+    "arco_narrativo": [
+      {
+        "parte": "hook",
+        "titulo": "Everything You Are Chasing Is Not What You Think It Is",
+        "conteudo": "You think you want money. You think you want status. You think you want the relationship, the body, the recognition. The Stoics looked at all of this and said: you are chasing shadows. The only thing worth having cannot be bought, stolen, or taken from you.",
+        "palavra_chave_visual": "dark labyrinth shadows dramatic"
+      },
+      {
+        "parte": "contexto",
+        "titulo": "The Stoic Definition of Good",
+        "conteudo": "The Stoics defined 'good' with surgical precision: only virtue — wisdom, justice, courage, temperance — is truly good. Everything else is 'preferred indifferent' — nice to have, but not necessary for a good life. This was not asceticism. It was a radical reorientation of desire.",
+        "palavra_chave_visual": "ancient greek philosophy temple dramatic"
+      },
+      {
+        "parte": "desenvolvimento",
+        "titulo": "Epictetus: The Richest Slave in Rome",
+        "conteudo": "Epictetus owned nothing. He was a slave, then a freed man who lived in a small hut. And yet he was consulted by senators and emperors. His wealth was entirely internal — a wealth of character that no external circumstance could diminish. He was the living proof of the Stoic thesis.",
+        "palavra_chave_visual": "simple stone room philosophical ancient"
+      },
+      {
+        "parte": "climax",
+        "titulo": "Marcus Aurelius: The Emperor Who Wanted Nothing",
+        "conteudo": "Marcus Aurelius had everything the ancient world considered valuable: power, wealth, fame, beauty. He spent his reign trying to give it away — through justice, through restraint, through service. 'Never esteem anything as of advantage to you that will make you break your word or lose your self-respect.'",
+        "palavra_chave_visual": "roman emperor throne austere dramatic"
+      },
+      {
+        "parte": "pratica",
+        "titulo": "The Virtue Audit",
+        "conteudo": "At the end of each day, ask four questions: Was I wiser today than yesterday? Did I act justly toward others? Did I face difficulty with courage? Did I exercise temperance in my pleasures? These four questions measure the only currency that actually accumulates into a life worth living.",
+        "palavra_chave_visual": "dark journal writing candlelight stone"
+      },
+      {
+        "parte": "conclusao",
+        "titulo": "The Unassailable Life",
+        "conteudo": "The man who has virtue cannot be truly harmed. Strip him of money — he has his wisdom. Destroy his reputation — he has his justice. Break his body — he has his courage. This is the Stoic promise: a life that external forces can inconvenience but never defeat. Build your life on virtue. Everything else is sand.",
+        "palavra_chave_visual": "stone foundation dramatic dark sky"
+      }
+    ],
+    "problema_moderno": "Chasing external markers of success at the expense of character and integrity.",
+    "emocao_central": "misplaced desire transformed into pursuit of character",
+    "duracao_estimada": "7-9 minutos",
+    "prompt_thumbnail": "A lone Roman philosopher standing before a pile of gold coins and jewels, turning away from them toward a simple stone path, dramatic cinematic lighting, hyperrealistic, no text"
+  },
+  {
+    "id": 10,
+    "tema": "Friendship and the Stoic Bond",
+    "filosofos": ["Seneca", "Marcus Aurelius"],
+    "tese_central": "For the Stoics, true friendship was rare, sacred, and based entirely on shared virtue — not utility or pleasure.",
+    "arco_narrativo": [
+      {
+        "parte": "hook",
+        "titulo": "Most of Your Relationships Are Transactions",
+        "conteudo": "You know this. The people who disappear when you have nothing to offer. The friends who only call when they need something. The connections built on convenience rather than character. The Stoics had a name for these: they were not friendships. They were alliances of mutual exploitation.",
+        "palavra_chave_visual": "dark crowd isolated figure dramatic"
+      },
+      {
+        "parte": "contexto",
+        "titulo": "Seneca and Lucilius: The Letters That Changed Philosophy",
+        "conteudo": "Seneca's 124 letters to Lucilius are the most intimate philosophical correspondence in history. They were friends in the deepest Stoic sense: each one held the other to the highest standard. Seneca wrote: 'Before you can sleep soundly, you must first know with whom you are sleeping — not in body, but in soul.'",
+        "palavra_chave_visual": "two figures ancient roman setting dramatic"
+      },
+      {
+        "parte": "desenvolvimento",
+        "titulo": "The Stoic Test of True Friendship",
+        "conteudo": "Seneca's test was simple: would this person remain your friend if you lost everything? Wealth, status, health, power — remove them all. Who remains? That is your real circle. The rest are fair-weather associates who mistake your utility for your worth.",
+        "palavra_chave_visual": "storm dark dramatic two figures standing"
+      },
+      {
+        "parte": "climax",
+        "titulo": "Marcus Aurelius: Gratitude for Teachers",
+        "conteudo": "The first book of the Meditations is entirely gratitude — Marcus listing what he learned from each person who shaped him. His teacher Rusticus. His adopted father Antoninus. His mother. He did not take these relationships for granted. He examined them, learned from them, and honoured them explicitly.",
+        "palavra_chave_visual": "ancient roman teacher student dramatic"
+      },
+      {
+        "parte": "pratica",
+        "titulo": "Audit Your Circle",
+        "conteudo": "Look at the five people you spend the most time with. For each one, ask: does this person make me more virtuous, or less? Do they challenge me or comfort me into stagnation? Do they tell me what I need to hear or what I want to hear? Your circle is your character in formation. Choose accordingly.",
+        "palavra_chave_visual": "small group dark dramatic stone setting"
+      },
+      {
+        "parte": "conclusao",
+        "titulo": "The Rare and Sacred Bond",
+        "conteudo": "True Stoic friendship is rare — precisely because virtue is rare. But when found, it is the greatest external good the Stoics acknowledged. A friend who holds you to your highest standard, who sees your worst and calls you toward your best — this is worth more than any title, any wealth, any comfort. Cultivate this. Guard it. Return it in kind.",
+        "palavra_chave_visual": "two figures dramatic sunrise horizon"
+      }
+    ],
+    "problema_moderno": "Shallow social connections, loneliness despite constant connectivity, toxic relationships.",
+    "emocao_central": "loneliness and shallow connection transformed into pursuit of genuine bonds",
+    "duracao_estimada": "7-9 minutos",
+    "prompt_thumbnail": "Two Roman figures in dark dramatic lighting, one placing a hand on the other's shoulder, stone background, cinematic chiaroscuro, hyperrealistic, no text"
+  },
+  {
+    "id": 11,
+    "tema": "The Examined Life",
+    "filosofos": ["Marcus Aurelius", "Seneca", "Epictetus"],
+    "tese_central": "The Stoics inherited Socrates' conviction: the unexamined life is not worth living. Daily self-examination was not optional — it was the practice.",
+    "arco_narrativo": [
+      {
+        "parte": "hook",
+        "titulo": "You Are Living Someone Else's Life",
+        "conteudo": "The values you hold — did you choose them? The goals you pursue — are they yours? The person you are becoming — is it deliberate? Most people inherit their lives from their culture, their parents, their peers. The Stoics demanded something radical: that you examine every assumption and choose consciously.",
+        "palavra_chave_visual": "mirror dark dramatic reflection stone"
+      },
+      {
+        "parte": "contexto",
+        "titulo": "Marcus Aurelius: The Nightly Tribunal",
+        "conteudo": "Every night, Marcus Aurelius held a tribunal over his own day. Not to punish himself — to learn. 'What did I do wrong today? What could I have done better? Where did I fall short of my own standard?' This was not self-flagellation. It was the engineering of a better version of himself.",
+        "palavra_chave_visual": "roman emperor alone night candlelight"
+      },
+      {
+        "parte": "desenvolvimento",
+        "titulo": "Seneca's Evening Examination",
+        "conteudo": "Seneca described the practice of his teacher Sextius: every evening, three questions. 'What bad habit have I cured today? What fault have I resisted? In what way am I better?' Not grand transformations — daily calibrations. The compound interest of self-examination over a lifetime is character.",
+        "palavra_chave_visual": "ancient writing dark philosophical stone"
+      },
+      {
+        "parte": "climax",
+        "titulo": "Epictetus: Know Yourself or Be Known by Your Impulses",
+        "conteudo": "Epictetus taught that most men are ruled by impulses they have never examined. They react before they reflect. They desire before they question whether the desire is worth pursuing. 'First say to yourself what you would be, and then do what you have to do.' Identity precedes action. But identity requires examination.",
+        "palavra_chave_visual": "dark dramatic philosophical statue ancient"
+      },
+      {
+        "parte": "pratica",
+        "titulo": "The Three Questions",
+        "conteudo": "Tonight, before you sleep, answer three questions in writing: What was my greatest failure today and what does it teach me? Where did I act against my own values and why? What one thing could I do differently tomorrow? Not a journal of events — a tribunal of character. Do this for thirty days. You will not recognise yourself.",
+        "palavra_chave_visual": "journal writing dark candlelight dramatic"
+      },
+      {
+        "parte": "conclusao",
+        "titulo": "The Deliberate Man",
+        "conteudo": "The examined life is not a comfortable life. It forces you to see yourself clearly — including the parts you would prefer to ignore. But it is the only path to becoming who you actually want to be rather than who circumstance made you. Examine. Adjust. Repeat. This is how the Stoics became what they became.",
+        "palavra_chave_visual": "lone figure dramatic dark sky stars"
+      }
+    ],
+    "problema_moderno": "Living on autopilot, lack of self-awareness, repeating the same mistakes.",
+    "emocao_central": "unconscious drifting transformed into deliberate self-construction",
+    "duracao_estimada": "7-9 minutos",
+    "prompt_thumbnail": "A Roman philosopher holding a torch in a dark cave, illuminating a stone wall covered in philosophical inscriptions, dramatic lighting, hyperrealistic, no text"
+  },
+  {
+    "id": 12,
+    "tema": "Power, Corruption and the Stoic King",
+    "filosofos": ["Marcus Aurelius", "Seneca"],
+    "tese_central": "The Stoics wrestled with power — both sought it and were destroyed by proximity to it. Marcus Aurelius is history's greatest example of power without corruption.",
+    "arco_narrativo": [
+      {
+        "parte": "hook",
+        "titulo": "Power Does Not Corrupt. It Reveals.",
+        "conteudo": "Give a man absolute power and you do not change him — you remove the constraints that were hiding who he already was. The Stoics understood this. Marcus Aurelius had more power than any human being alive. He chose to use it as a burden, not a privilege.",
+        "palavra_chave_visual": "dark throne dramatic ancient stone power"
+      },
+      {
+        "parte": "contexto",
+        "titulo": "Marcus Aurelius: The Reluctant Emperor",
+        "conteudo": "Marcus Aurelius never wanted to be Emperor. He was chosen at 17 by Hadrian, spent decades waiting, and when the power finally came, he wrote about how to resist its corrupting gravity. 'Do not indulge in such dreams as: I shall live in the country, or I shall be happy in retirement.' He stayed. He served.",
+        "palavra_chave_visual": "roman emperor court dramatic stone"
+      },
+      {
+        "parte": "desenvolvimento",
+        "titulo": "Seneca and the Corruption of Nero",
+        "conteudo": "Seneca served as Nero's tutor and advisor, believing he could moderate the Emperor's excesses through philosophy. He failed. Nero burned Rome and blamed the Christians. Seneca wrote desperately about virtue while watching his former student descend into madness. It nearly destroyed him — philosophically and literally.",
+        "palavra_chave_visual": "rome fire dramatic dark cinematic"
+      },
+      {
+        "parte": "climax",
+        "titulo": "The Test of Small Powers",
+        "conteudo": "You will never be Emperor. But you will be a manager, a parent, a leader in some domain. The Stoic question is not: what would I do with absolute power? It is: what do I do with the small powers I have right now? How do I treat those who cannot resist me? How I treat the powerless reveals my character.",
+        "palavra_chave_visual": "small group leadership dramatic dark"
+      },
+      {
+        "parte": "pratica",
+        "titulo": "The Servant Leader",
+        "conteudo": "Marcus Aurelius's model of power was service. 'The object of life is not to be on the side of the majority, but to escape finding oneself in the ranks of the insane.' Every position of power is a trust. Exercise it as if you will be held accountable — because eventually, you will be.",
+        "palavra_chave_visual": "leader serving others dramatic stone"
+      },
+      {
+        "parte": "conclusao",
+        "titulo": "The Legacy of the Philosopher King",
+        "conteudo": "Marcus Aurelius died having used the most absolute power in the ancient world to serve rather than exploit. His Meditations — his private philosophical diary — survive him by two thousand years. Nero's palaces are rubble. Character outlasts power. Always. Build accordingly.",
+        "palavra_chave_visual": "ancient ruins time dramatic sky"
+      }
+    ],
+    "problema_moderno": "Abuse of power in relationships and leadership, ego inflation with success.",
+    "emocao_central": "ego and power hunger transformed into servant leadership",
+    "duracao_estimada": "7-9 minutos",
+    "prompt_thumbnail": "A Roman emperor sitting on a throne, head bowed in humility, surrounded by a dark dramatic chamber, lone candle, cinematic hyperrealistic, no text"
+  },
+  {
+    "id": 13,
+    "tema": "The Body as Tool",
+    "filosofos": ["Musonius Rufus", "Epictetus", "Marcus Aurelius"],
+    "tese_central": "The Stoics saw the body not as the self but as a tool — to be maintained with discipline, neither indulged nor neglected.",
+    "arco_narrativo": [
+      {
+        "parte": "hook",
+        "titulo": "You Are Not Your Body. But You Are Responsible for It.",
+        "conteudo": "The Stoics made a precise distinction: you are not your body, but you inhabit it, and you are accountable for how you maintain it. Neglect the tool and the craftsman suffers. Worship the tool and you have confused means with ends.",
+        "palavra_chave_visual": "dramatic dark athletic stone ancient"
+      },
+      {
+        "parte": "contexto",
+        "titulo": "Musonius Rufus on Physical Training",
+        "conteudo": "Musonius Rufus taught that physical training was a philosophical act. He made his students — senators and generals — perform manual labour, eat simply, and endure physical discomfort. Not to build athletes, but to build men whose minds could not be held hostage by bodily comfort.",
+        "palavra_chave_visual": "ancient roman training discipline stone"
+      },
+      {
+        "parte": "desenvolvimento",
+        "titulo": "Epictetus: The Soul in a Borrowed Body",
+        "conteudo": "Epictetus's leg was broken and never healed properly. He walked with difficulty his entire life. And he taught that the body was simply a vessel — borrowed, temporary, not truly ours. 'Seek not that the things which happen should happen as you wish; but wish the things which happen to be as they are, and you will have a tranquil flow of life.'",
+        "palavra_chave_visual": "ancient philosopher walking dramatic stone"
+      },
+      {
+        "parte": "climax",
+        "titulo": "Marcus Aurelius Against Physical Pleasure",
+        "conteudo": "Marcus Aurelius wrote extensively about resisting the pull of physical pleasure. Not because pleasure is evil — but because the man ruled by physical desire is not free. 'Confine yourself to the present.' The body wants comfort, sleep, excess. The Stoic gives it what it needs and no more.",
+        "palavra_chave_visual": "roman soldier discipline dramatic dark"
+      },
+      {
+        "parte": "pratica",
+        "titulo": "The Body as Daily Practice",
+        "conteudo": "Train your body not to look a certain way but to reinforce a certain relationship with discomfort. Wake early. Move deliberately. Eat with intention. Sleep enough but not excessively. Each physical discipline is a vote for the kind of mind you want to inhabit the body with.",
+        "palavra_chave_visual": "dawn training dark dramatic discipline"
+      },
+      {
+        "parte": "conclusao",
+        "titulo": "The Instrument of Virtue",
+        "conteudo": "The Stoic body is an instrument of virtue, not its master. Maintain it. Train it. Discipline it. But never mistake it for you. When it weakens — as it will — your character need not. The body ages. Virtue, if properly cultivated, only deepens. That is the Stoic's final victory over mortality.",
+        "palavra_chave_visual": "aged philosopher dramatic wisdom stone"
+      }
+    ],
+    "problema_moderno": "Both extremes: neglect of physical health and obsessive body worship.",
+    "emocao_central": "either neglect or vanity transformed into disciplined stewardship",
+    "duracao_estimada": "7-9 minutos",
+    "prompt_thumbnail": "A Stoic philosopher in a training ground, surrounded by Roman soldiers exercising, watching calmly, dramatic cinematic lighting, hyperrealistic, no text"
+  },
+  {
+    "id": 14,
+    "tema": "Grief and the Stoic Heart",
+    "filosofos": ["Seneca", "Marcus Aurelius"],
+    "tese_central": "The Stoics did not suppress grief — they understood it, honoured it briefly, and refused to let it become a permanent residence.",
+    "arco_narrativo": [
+      {
+        "parte": "hook",
+        "titulo": "You Are Allowed to Grieve. You Are Not Allowed to Live There.",
+        "conteudo": "Loss is not optional. Grief is not weakness. But there is a difference between honouring pain and building your identity around it. The Stoics drew this line with precision.",
+        "palavra_chave_visual": "dark rain dramatic stone ancient"
+      },
+      {
+        "parte": "contexto",
+        "titulo": "Seneca's Letter on Grief",
+        "conteudo": "When his friend Lucilius lost someone he loved, Seneca wrote: 'Let your tears flow, but let them also cease.' He did not say: do not feel. He said: feel fully, then return to life. Prolonged grief, for Seneca, was a form of self-indulgence that honoured the dead less than it punished the living.",
+        "palavra_chave_visual": "ancient letter writing dramatic dark"
+      },
+      {
+        "parte": "desenvolvimento",
+        "titulo": "Marcus Aurelius: Five Children, One Composure",
+        "conteudo": "Marcus Aurelius lost five children in childhood. He wept publicly when his co-emperor and friend Lucius Verus died — something unprecedented for a Roman Emperor. And then he returned to governing. Not because he did not feel — but because he understood that grief, left unchecked, becomes a cage.",
+        "palavra_chave_visual": "roman emperor dark dramatic stone mourning"
+      },
+      {
+        "parte": "climax",
+        "titulo": "The Stoic Distinction: Pain vs Suffering",
+        "conteudo": "Pain is inevitable. Suffering is the story you tell about the pain. The loss happens. The question is whether you add to it the narrative: 'This should not have happened. Life is unfair. I will never recover.' The Stoics accepted loss as the natural price of love and attachment — and paid it without resentment.",
+        "palavra_chave_visual": "rain dark figure dramatic stone"
+      },
+      {
+        "parte": "pratica",
+        "titulo": "Grief as a Finite Season",
+        "conteudo": "Allow yourself a defined season of grief. Honour it fully. Do not suppress it or perform strength you do not feel. But set, in your own mind, a horizon — not a date when you will have forgotten, but a date when you will have returned to living. The dead are not honoured by the living refusing to live.",
+        "palavra_chave_visual": "seasons change dark to light dramatic"
+      },
+      {
+        "parte": "conclusao",
+        "titulo": "Love Without Clinging",
+        "conteudo": "Epictetus taught: 'Never say of anything, I have lost it; but, I have returned it.' Your child, your friend, your love — all borrowed. The Stoic loves fully, knowing the loan has a term. This is not coldness. It is the deepest possible love: one that does not demand the beloved be permanent.",
+        "palavra_chave_visual": "lone figure dramatic light horizon"
+      }
+    ],
+    "problema_moderno": "Unprocessed grief, inability to move forward after loss, identity built on suffering.",
+    "emocao_central": "grief transformed into love that accepts impermanence",
+    "duracao_estimada": "7-9 minutos",
+    "prompt_thumbnail": "A Roman figure in dark dramatic stone setting, one hand on a stone grave marker, looking upward with quiet strength, cinematic hyperrealistic, no text"
+  },
+  {
+    "id": 15,
+    "tema": "The Stoic and Modern Chaos",
+    "filosofos": ["Marcus Aurelius", "Seneca", "Epictetus"],
+    "tese_central": "The Stoics built their philosophy during a period of maximum chaos — plague, war, political madness. Their tools were designed for exactly the world we live in now.",
+    "arco_narrativo": [
+      {
+        "parte": "hook",
+        "titulo": "They Built This Philosophy for You",
+        "conteudo": "Not for ancient Rome. Not for emperors and senators. For you — living in a world of information overload, political chaos, economic uncertainty and constant noise. The Stoics had your world. They called it the Roman Empire at its peak. They had answers.",
+        "palavra_chave_visual": "modern city dark dramatic contrast ancient"
+      },
+      {
+        "parte": "contexto",
+        "titulo": "Marcus Aurelius: The Original Crisis Manager",
+        "conteudo": "Marcus Aurelius governed during the Antonine Plague — which killed five million people. During German invasions that threatened to collapse the empire. During a civil war started by his own general. He faced cascading, simultaneous crises for nearly two decades. And he wrote philosophy every night.",
+        "palavra_chave_visual": "ancient rome crisis dramatic dark"
+      },
+      {
+        "parte": "desenvolvimento",
+        "titulo": "Seneca in the Age of Nero",
+        "conteudo": "Seneca lived under an emperor who burned his own city, murdered his own mother, and executed anyone who threatened his ego. Sound familiar? Seneca's response was not political revolution — it was philosophical fortification. Build your inner life so strong that no external madness can reach it.",
+        "palavra_chave_visual": "rome fire dark dramatic cinematic"
+      },
+      {
+        "parte": "climax",
+        "titulo": "Epictetus: Freedom in an Unfree World",
+        "conteudo": "Epictetus was a slave in the most literal sense — owned by another man. And he was the freest philosopher in Rome. Because he had understood the one distinction that makes all the difference: what is mine and what is not. In a world that wants to own your attention, your fear and your outrage — this distinction is revolutionary.",
+        "palavra_chave_visual": "chains breaking dramatic dark stone"
+      },
+      {
+        "parte": "pratica",
+        "titulo": "The Stoic Daily Protocol for Modern Chaos",
+        "conteudo": "Morning: read one page of Stoic philosophy before looking at your phone. Evening: examine your day using the three Stoic questions. Weekly: practice one voluntary discomfort. These three practices, done consistently, build the psychological immune system the modern world requires but never teaches.",
+        "palavra_chave_visual": "dawn light discipline dramatic quiet"
+      },
+      {
+        "parte": "conclusao",
+        "titulo": "The Philosophy That Refuses to Age",
+        "conteudo": "Two thousand years have passed. The problems have changed their names but not their nature. Fear. Anger. Loss. Power. Time. Death. The Stoics addressed all of them with a precision that has never been improved upon. They built this for you. The only question is whether you will use it.",
+        "palavra_chave_visual": "ancient modern dramatic contrast philosophy"
+      }
+    ],
+    "problema_moderno": "Overwhelm, anxiety, loss of meaning in the modern world.",
+    "emocao_central": "overwhelm transformed into philosophical clarity and resilience",
+    "duracao_estimada": "7-9 minutos",
+    "prompt_thumbnail": "A split image: ancient Roman ruins on one side, modern dark city skyline on the other, a lone Stoic philosopher bridging both worlds, dramatic cinematic, hyperrealistic, no text"
+  }
+]
